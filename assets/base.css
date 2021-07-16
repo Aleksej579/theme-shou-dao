@@ -2084,3 +2084,11 @@ details-disclosure > details {
     overflow: auto;
   }
 }
+
+
+
+
+/* test css */
+.banner__box.color-background-1 {
+  border: 1px solid red;
+}
