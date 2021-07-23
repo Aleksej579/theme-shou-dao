@@ -50,11 +50,15 @@
         "text",
         "button"
       ]
+    },
+    "test_block": {
+      "type": "test-block"
     }
   },
   "order": [
     "image_banner",
     "featured_products",
-    "image_text"
+    "image_text",
+    "test_block"
   ]
 }

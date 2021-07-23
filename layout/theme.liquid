@@ -8,6 +8,8 @@
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
+    <!-- <link rel="stylesheet" href="https://unpkg.com/@shopify/polaris@6.6.0/dist/styles.css" /> -->
+
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | img_url: '32x32' }}">
     {%- endif -%}
@@ -26,6 +28,12 @@
 
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {{ content_for_header }}
+
+
+    <!-- <script >
+      import enTranslations from '@shopify/polaris/locales/en.json';
+      import { AppProvider, Page, Card, Button } from '@shopify/polaris';
+    </script> -->
 
     {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
@@ -102,6 +110,8 @@
     {%- endunless -%}
 
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+
+
   </head>
 
   <body>
@@ -140,5 +150,8 @@
         unavailable: `{{ 'products.product.unavailable' | t }}`,
       }
     </script>
+
+    <!-- <script src="/assets/react-component.js"></script> -->
+
   </body>
 </html>

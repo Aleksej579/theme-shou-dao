@@ -1,0 +1,36 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js add @shopify-polaris
+
+PATH: 
+  /home/alexey/.rbenv/plugins/ruby-build/bin:/home/alexey/.rbenv/shims:/home/alexey/.rbenv/bin:/home/alexey/.rbenv/plugins/ruby-build/bin:/home/alexey/.rbenv/shims:/home/alexey/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  12.22.2
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@shopify-polaris: Request "https://registry.yarnpkg.com/@shopify-polaris" returned a 405
+      at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:66997:18)
+      at Request.self.callback (/usr/share/yarn/lib/cli.js:140749:22)
+      at Request.emit (events.js:314:20)
+      at Request.<anonymous> (/usr/share/yarn/lib/cli.js:141721:10)
+      at Request.emit (events.js:314:20)
+      at IncomingMessage.<anonymous> (/usr/share/yarn/lib/cli.js:141643:12)
+      at Object.onceWrapper (events.js:420:28)
+      at IncomingMessage.emit (events.js:326:22)
+      at endReadableNT (_stream_readable.js:1241:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

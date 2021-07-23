@@ -1,0 +1,45 @@
+<h1>TEST</h1>
+{{ shop.url }}
+<div id="app"></div>
+<!-- <button class="Polaris-Button">Example button</button> -->
+
+{% schema %}
+    {
+        "name": "t:sections.test-block.name",
+        "class": "wrapper-test-react",
+        "settings": [
+            {
+                "type": "text",
+                "id": "react",
+                "label": "React",
+                "default": "Buy it now and get two!"
+            }
+        ]
+    }
+{% endschema %}
+
+
+{% javascript %}
+   console.log('teeeeeeest');
+
+   ReactDOM.render(
+    <AppProvider i18n={enTranslations}>
+      <Page title="Example app">
+        <Card sectioned>
+          <Button onClick={() => alert('Button clicked!')}>Example button</Button>
+        </Card>
+      </Page>
+    </AppProvider>,
+    document.querySelector('#app'),
+  );
+
+{% endjavascript %}
+
+
+
+{% stylesheet %}
+.wrapper-test-react {
+  border: 1px solid red;
+}
+{% endstylesheet %}
+
