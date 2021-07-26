@@ -4,11 +4,11 @@ const { src, dest } = require('gulp');
 const { watch, series } = require('gulp');
 
 function css() {
-    return src('./assets/test_sass.sass')
+    return src('./assets/*.sass')
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(gulp.dest('./assets/'));
 }
 
 exports.default = function () {
-    watch('./assets/test_sass.sass', css);
+    watch('./assets/*.sass', css);
 }
