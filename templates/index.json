@@ -39,7 +39,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/2.jpg",
-            "title": "Column",
+            "title": "",
             "text": "<p><a href=\"\/collections\" title=\"All collections\">Collections<\/a><\/p>"
           }
         },
