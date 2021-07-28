@@ -47,8 +47,8 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/3.jpg",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+            "title": "",
+            "text": "<p><a href=\"\/pages\/privacy-policy\" title=\"Privacy Policy\">Page Policy<\/a><\/p>"
           }
         },
         "162747831075fc3ac5-2": {
