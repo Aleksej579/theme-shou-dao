@@ -8,7 +8,21 @@
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
-    <!-- <link rel="stylesheet" href="https://unpkg.com/@shopify/polaris@6.6.0/dist/styles.css" /> -->
+
+
+
+    {% comment %} <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/> {% endcomment %}
+    <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/bower_components/owl.carousel/dist/assets/owl.carousel.min.css" />
+
+    <link rel="stylesheet" href="{{ 'owl.carousel.min.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'owl.theme.default.min.css' | asset_url }}">
+
+
+
+
+
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | img_url: '32x32' }}">
@@ -29,11 +43,6 @@
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {{ content_for_header }}
 
-
-    <!-- <script >
-      import enTranslations from '@shopify/polaris/locales/en.json';
-      import { AppProvider, Page, Card, Button } from '@shopify/polaris';
-    </script> -->
 
     {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
@@ -151,7 +160,15 @@
       }
     </script>
 
-    <!-- <script src="/assets/react-component.js"></script> -->
+
+{% comment %} 
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+<script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script> {% endcomment %}
+
+
+    {{ '//ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js' | script_tag }}
+    {{ 'owl.carousel.js'  | asset_url | script_tag }}
+    {{ 'react-component.js' | asset_url | script_tag }}
 
   </body>
 </html>

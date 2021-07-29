@@ -1,14 +1,23 @@
-// import enTranslations from '@shopify/polaris/locales/en.json';
-// import { AppProvider, Page, Card, Button } from '@shopify/polaris';
+$('slider-component ul').each(function () {
+    $(this).replaceWith($('<div class="ul_">' + this.innerHTML + '</div>'));
+});
+
+$('slider-component .ul_ li').each(function () {
+    $(this).replaceWith($('<div class="li_">' + this.innerHTML + '</div>'));
+});
+
+$('slider-component .ul_').find('.li_').wrapAll("<div class='owl-carousel owl-theme'></div>");
 
 
-// ReactDOM.render(
-//     <AppProvider i18n={enTranslations}>
-//         <Page title="Example app">
-//             <Card sectioned>
-//                 <Button onClick={() => alert('Button clicked!')}>Example button</Button>
-//             </Card>
-//         </Page>
-//     </AppProvider>,
-//     document.querySelector('#app'),
-// );
+$(document).ready(function () {
+    $(".owl-carousel").owlCarousel(
+        {
+            items: 4,
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 10000,
+            autoplayHoverPause: true
+        }
+    );
+});
