@@ -16,9 +16,22 @@ $(document).ready(function () {
             loop: true,
             margin: 10,
             autoplay: true,
-            // autoplay: false,
             autoplayTimeout: 10000,
-            autoplayHoverPause: true
+            // autoplayHoverPause: true,
+            responsive: {
+                320: {
+                    items: 1,
+                },
+                480: {
+                    items: 2,
+                },
+                768: {
+                    items: 3
+                },
+                1280: {
+                    items: 4
+                }
+            }
         }
     );
 });
