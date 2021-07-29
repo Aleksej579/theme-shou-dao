@@ -79,7 +79,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/startup-desk.jpg",
-            "title": "Column",
+            "title": "",
             "text": ""
           }
         }
