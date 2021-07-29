@@ -16,6 +16,7 @@ $(document).ready(function () {
             loop: true,
             margin: 10,
             autoplay: true,
+            // autoplay: false,
             autoplayTimeout: 10000,
             autoplayHoverPause: true
         }
