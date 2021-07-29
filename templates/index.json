@@ -55,7 +55,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/5.jpg",
-            "title": "Column",
+            "title": "",
             "text": ""
           }
         },
@@ -63,7 +63,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/1.jpg",
-            "title": "Column",
+            "title": "",
             "text": ""
           }
         },
@@ -71,7 +71,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/4.jpg",
-            "title": "Column",
+            "title": "",
             "text": ""
           }
         },
