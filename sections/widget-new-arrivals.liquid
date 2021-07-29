@@ -1,0 +1,56 @@
+<h1>New arrival</h1>
+
+<ul class='wrapper-all-cart'>
+    {% for product in collections.new-arrival.products limit: 5 %}
+        <li class="cart">
+            <p>{{ product.title }}</p>
+            <img src="{{ product | img_url: 'medium'  }}" alt="prod new arrive" loading="lazy" width="" height=""> 
+            <p>{{ product.published_at | date: "%b %d, %y" }}</p>
+            <p class="product__price">{{ product.price | money}}</p>
+        </li>
+    {% endfor %}
+</ul>
+
+
+{% schema %}
+    {
+        "name": "t:sections.widget-new-arrivals.name",
+        "class": "new_arrival",
+        "settings": [
+            {
+                "type": "text",
+                "id": "new_arrival",
+                "label": "New arrival",
+                "default": "New arrivals soon!"
+            }
+        ]
+    }
+{% endschema %}
+
+
+{% javascript %}
+   console.log('new arrival');
+{% endjavascript %}
+
+
+
+{% stylesheet %}
+.wrapper-all-cart {
+    display: flex;
+    padding: 0;
+}
+.cart {
+    width: 20%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: 5px;
+}
+.cart img {
+    width: 100%;
+    height: auto;
+}
+{% endstylesheet %}
+
