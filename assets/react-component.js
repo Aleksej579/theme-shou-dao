@@ -1,4 +1,4 @@
-$('slider-component ul').each(function () {
+$('slider-component ul.multicolumn-list').each(function () {
     $(this).replaceWith($('<div class="ul_">' + this.innerHTML + '</div>'));
 });
 
