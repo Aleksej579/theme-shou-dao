@@ -82,14 +82,6 @@
             "title": "",
             "text": ""
           }
-        },
-        "1d0662d4-d020-4e9e-898f-6d5450587b4a": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/office-computer-screen.jpg",
-            "title": "",
-            "text": ""
-          }
         }
       },
       "block_order": [
@@ -98,8 +90,7 @@
         "162747831075fc3ac5-2",
         "fdb4d0e8-cc1d-493e-a249-c48aad4f6ac4",
         "75f99b71-e748-4534-8d60-96e76e2e98b6",
-        "a352f572-0c90-4b86-a713-a7171dac569b",
-        "1d0662d4-d020-4e9e-898f-6d5450587b4a"
+        "a352f572-0c90-4b86-a713-a7171dac569b"
       ],
       "settings": {
         "title": "Test-slider-auto-10-sek",
