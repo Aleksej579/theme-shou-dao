@@ -68,6 +68,35 @@
           <div class="card__content"><h2 class="card__text h2">{{ product_card_product.title }}</h2></div>
         {%- endif -%}
 
+        <!-- test-new-badge -->
+        <div class="test-badge">
+
+          <!-- {% for tag in product.tags %}
+            {% if tag  contains 'Sale' %}
+              <span class= "badge-test badge-sale">Sale</span>
+            {% endif %}
+            <span class="badge-test badge-sale">Sale</span>
+          {% endfor %} -->
+
+          {% assign check_item = false %}
+          {% for tag in product.tags %}
+            {% if tag  contains 'Sale' %}
+              {% assign check_item = true %}
+            {% endif %}
+          {% endfor %}
+
+          {% if check_item == true %}
+            <span class="badge-test badge-sale">Sale</span>
+          {% endif %}
+
+          
+
+          <!-- <span class="badge-test badge-sale">Sale</span>
+          <span class="badge-test badge-free_shipping">Free shipping</span>
+          <span class="badge-test badge-new">New</span>
+          <span class="badge-test badge-closeout">Closeout</span> -->
+        </div>
+
         <div class="card__badge">
           {%- if product_card_product.available == false -%}
             <span class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}" aria-hidden="true">{{ 'products.product.sold_out' | t }}</span>
