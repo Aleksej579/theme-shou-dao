@@ -75,49 +75,22 @@
 
           {% for product in collection.products %}
 
-          {% if product.tags contains "Sale" %}
-            <span class="badge-test badge-sale">Sale</span>
-          {% endif %}
-
-          {% if product.tags contains "Free shipping" %}
-            <span class="badge-test badge-free_shipping">Free shipping</span>
-          {% endif %}
-
-          {% if product.tags contains "New" %}
-            <span class="badge-test badge-new">New</span>
-          {% endif %}
-
-          {% if product.tags contains "Closeout" %}
-            <span class="badge-test badge-closeout">Closeout</span>
-          {% endif %}
-
-
-          <!-- {% assign tag_sale = 'false' %}
-          {% for tag in product.tags %}
-            {% if tag  contains 'Sale' %}     
-              {% assign tag_sale ='true' %} 
+            {% if product.tags contains "Sale" %}
+              <span class="badge-test badge-sale">Sale</span>
             {% endif %}
-          {% endfor %}
 
-          {% if tag_sale == 'true' %}
-            <span class="badge-test badge-sale">Sale</span>
-          {% endif %}
+            {% if product.tags contains "Free shipping" %}
+              <span class="badge-test badge-free_shipping">Free shipping</span>
+            {% endif %}
 
-            {% for tag in product.tags %}
-              {% case tag %}
-              {% when 'Sale' %}
-                <span class="badge-test badge-sale">Sale</span>
-                {% break %}
-              {% when 'Free shipping' %}
-                <span class="badge-test badge-free_shipping">Free shipping</span>
-                {% break %}
-              {% when 'New' %}
-                <span class="badge-test badge-new">New</span>
-                {% break %}
-              {% when 'Closeout' %}
-                <span class="badge-test badge-closeout">Closeout</span>
-              {% endcase %}
-            {% endfor %} -->
+            {% if product.tags contains "New" %}
+              <span class="badge-test badge-new">New</span>
+            {% endif %}
+
+            {% if product.tags contains "Closeout" %}
+              <span class="badge-test badge-closeout">Closeout</span>
+            {% endif %}
+            
           {% endfor %}
 
 
