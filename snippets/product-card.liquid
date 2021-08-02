@@ -72,6 +72,7 @@
         <div class="test-badge">
 
           {% for product in collection.products %}
+          {{ product.title }}
             {% for tag in product.tags %}
               {% case tag %}
               {% when 'Sale' %}
