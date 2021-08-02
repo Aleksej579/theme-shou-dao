@@ -71,8 +71,38 @@
         <!-- test-new-badge -->
         <div class="test-badge">
 
+
+
           {% for product in collection.products %}
-          {{ product.title }}
+
+          {% if product.tags contains "Sale" %}
+            <span class="badge-test badge-sale">Sale</span>
+          {% endif %}
+
+          {% if product.tags contains "Free shipping" %}
+            <span class="badge-test badge-free_shipping">Free shipping</span>
+          {% endif %}
+
+          {% if product.tags contains "New" %}
+            <span class="badge-test badge-new">New</span>
+          {% endif %}
+
+          {% if product.tags contains "Closeout" %}
+            <span class="badge-test badge-closeout">Closeout</span>
+          {% endif %}
+
+
+          <!-- {% assign tag_sale = 'false' %}
+          {% for tag in product.tags %}
+            {% if tag  contains 'Sale' %}     
+              {% assign tag_sale ='true' %} 
+            {% endif %}
+          {% endfor %}
+
+          {% if tag_sale == 'true' %}
+            <span class="badge-test badge-sale">Sale</span>
+          {% endif %}
+
             {% for tag in product.tags %}
               {% case tag %}
               {% when 'Sale' %}
@@ -86,22 +116,11 @@
                 {% break %}
               {% when 'Closeout' %}
                 <span class="badge-test badge-closeout">Closeout</span>
-            {% endcase %}
-
-            {% endfor %}
+              {% endcase %}
+            {% endfor %} -->
           {% endfor %}
 
 
-
-
-
-
-          
-
-          <!-- <span class="badge-test badge-sale">Sale</span>
-          <span class="badge-test badge-free_shipping">Free shipping</span>
-          <span class="badge-test badge-new">New</span>
-          <span class="badge-test badge-closeout">Closeout</span> -->
         </div>
 
         <div class="card__badge">
