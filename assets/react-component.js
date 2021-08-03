@@ -35,3 +35,35 @@ $(document).ready(function () {
         }
     );
 });
+
+// Logic-badge
+let li = document.querySelectorAll("ul#main-collection-product-grid li")
+// console.log(li)
+li.forEach((item) => {
+    let list_span = item.querySelectorAll('.test-badge')[0].children
+    console.log(list_span)
+    for (let it of list_span) {
+
+        it.style.display = "none";
+
+        if (it.className == 'badge-test badge-closeout') {
+            console.log('badge-closeout')
+            it.style.display = "block";
+
+        } else if (it.className == 'badge-test badge-new') {
+            console.log('badge-new')
+            it.style.display = "block";
+
+        } else if (it.className == 'badge-test badge-free_shipping') {
+            console.log('badge-free_shipping')
+            it.style.display = "block";
+
+        } else if (it.className == 'badge-test badge-sale') {
+            console.log('badge-sale')
+            it.style.display = "block";
+
+        }
+    }
+});
+
+
