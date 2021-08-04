@@ -64,7 +64,7 @@
     collection: {
       id: {%- if request.page_type == 'collection' -%}{{ collection.id | default: 0 }}{%- else -%}0{%- endif -%},
       handle: {%- if request.page_type == 'collection' -%}'{{ collection.handle }}'{%- else -%}''{%- endif -%},
-      sort: {% if request.page_type contains 'collection' %}"{{ collection.default_sort_by | default: 'best-selling' }}"{% elsif request.page_type contains 'search' %}'relevance'{% else %}'best-selling'{% endif %},
+      sort: 'title-ascending',
       tags: {% if current_tags %}[{% for tag in current_tags %}{{ tag | json }},{{ tag | handle | json }}{% unless forloop.last %},{% endunless %}{% endfor %}]{% else %}null{% endif %},
       vendor: {{ collection.current_vendor | json }},
       type: {{ collection.current_type | json }},
