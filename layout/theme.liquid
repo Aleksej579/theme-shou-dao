@@ -172,5 +172,5 @@
     {{ 'react-component.js' | asset_url | script_tag }}
 
   {% include 'globo.filter.action' %}
-	</body>
+	{% if content_for_header contains 'product_label' %}{% include 'bss-product-label-js' %}{% endif %}</body>
 </html>
