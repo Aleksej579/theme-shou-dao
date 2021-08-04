@@ -77,7 +77,27 @@
             3 Free shipping
             4 Sale
           {% endcomment %}
+          
+          {% assign date_now = 'now' | date: '%s' %}
+          {% assign date_published = product_card_product.created_at | date: '%s' %}
+          {% assign date_difference = date_now | minus: date_published %}
+          {% assign date_difference_ = date_difference | date: '%d' | divided_by: 1 %}
 
+          {% if product_card_product.tags contains "Closeout" %}
+            <span class="badge-test badge-closeout">Closeout</span>
+          {% elsif date_difference_ <= 10 %}
+            <span class="badge-test badge-new">New</span>
+          {% elsif product_card_product.tags contains "Free shipping" %}
+          	<span class="badge-test badge-free_shipping">Free shipping</span>
+          {% elsif product_card_product.compare_at_price > product_card_product.price %}
+            <span class="badge-test badge-sale">Sale</span>
+          {% endif %}
+          
+          
+
+          
+          {% comment %}
+          
             {% if product_card_product.compare_at_price > product_card_product.price %}
               <span class="badge-test badge-sale">Sale</span>
             {% endif %}
@@ -86,7 +106,6 @@
             {% assign date_published = product_card_product.created_at | date: '%s' %}
             {% assign date_difference = date_now | minus: date_published %}
             {% assign date_difference_ = date_difference | date: '%d' | divided_by: 1 %}
-            {% comment %}  4 - number of days ago {% endcomment %}
             {% if date_difference_ <= 10 %}
               <span class="badge-test badge-new">New</span>
             {% endif %}
@@ -98,9 +117,11 @@
             {% if product_card_product.tags contains "Closeout" %}
               <span class="badge-test badge-closeout">Closeout</span>
             {% endif %}
+          
+           {% endcomment %}
 
         </div>
-        {% comment %}  {{ date_now | date: '%Y.%m.%d' }} - {{ date_published | date: '%Y.%m.%d' }} = {{ date_difference_ }}  {% endcomment %}
+        {{ date_now | date: '%Y.%m.%d' }} - {{ date_published | date: '%Y.%m.%d' }} = {{ date_difference_ }}
 
 
         <div class="card__badge">
