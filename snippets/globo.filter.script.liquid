@@ -50,7 +50,7 @@
       id: null
     },
     filter: {
-      id: {"default":0,"269133643981":39145}[page_id] || {"default":0,"269133643981":39145}['default'] || 0,
+      id: {"default":39145}[page_id] || {"default":39145}['default'] || 0,
       layout: 1,
       showCount: 1,
       isLoadMore: 0,
@@ -64,7 +64,7 @@
     collection: {
       id: {%- if request.page_type == 'collection' -%}{{ collection.id | default: 0 }}{%- else -%}0{%- endif -%},
       handle: {%- if request.page_type == 'collection' -%}'{{ collection.handle }}'{%- else -%}''{%- endif -%},
-      sort: 'price-ascending',
+      sort: 'title-ascending',
       tags: {% if current_tags %}[{% for tag in current_tags %}{{ tag | json }},{{ tag | handle | json }}{% unless forloop.last %},{% endunless %}{% endfor %}]{% else %}null{% endif %},
       vendor: {{ collection.current_vendor | json }},
       type: {{ collection.current_type | json }},
