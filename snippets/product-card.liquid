@@ -102,8 +102,17 @@
             <span class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}" aria-hidden="true">{{ 'products.product.on_sale' | t }}</span>
           {%- endif -%}
         </div>
-
       </div>
+    </div>
+
+    <div id="variant-inventory">
+      {% if product_card_product.variants.first.inventory_management == "shopify" %}
+         {% if product_card_product.variants.first.inventory_quantity > 0 %}
+            <p>We currently have <strong>{{ product_card_product.variants.first.inventory_quantity }}</strong> in stock.</p>
+         {% else %}
+            <p>Out of stock</p>
+         {% endif %}
+      {% endif %}
     </div>
 
     <div class="card-information">
