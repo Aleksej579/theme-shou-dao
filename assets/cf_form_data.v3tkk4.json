@@ -1,0 +1,259 @@
+{
+  "form": {
+    "id": "v3tkk4",
+    "name": "Registration",
+    "handle": "registration-3814",
+    "theme_id": null,
+    "settings": {
+      "locales": {
+        "back": "Back",
+        "next": "Next",
+        "cancel": "Cancel",
+        "edit_link": "Edit account",
+        "fix_errors": "Please fix errors before continuing",
+        "is_invalid": "{{label}} is invalid",
+        "email_taken": "Email has already been taken",
+        "phone_taken": "Phone number has already been taken",
+        "server_error": "Could not save form, please try again later",
+        "step_counter": "Step {{current}} of {{total}}",
+        "verify_email": "Check your email for a verification link to activate your account.",
+        "not_available": "An error occurred while saving your account, please try again in a few minutes.",
+        "create_account": "Create account",
+        "update_account": "Update account",
+        "recaptcha_error": "Challenge verification failed, please try again",
+        "creating_account": "Creating account...",
+        "updating_account": "Updating account...",
+        "invalid_email_domain": "Email contains an invalid domain name"
+      },
+      "enableRecaptcha": false,
+      "whitelistedTags": "",
+      "recaptchaSiteKey": "",
+      "markRequiredFields": false,
+      "displayCancelButton": true,
+      "goBackAfterSubmission": false,
+      "cancelButtonRedirectUrl": "\/account\/login",
+      "postSubmissionRedirectUrl": "\/account",
+      "goBackAfterCancelButtonClick": false
+    },
+    "install_locations": [
+
+    ],
+    "created_at": "2021-08-04T16:04:34Z",
+    "updated_at": "2021-08-04T16:04:34Z",
+    "revision_ids": [
+      "p4TZGG3",
+      "kdT5PPk"
+    ]
+  },
+  "revision": {
+    "id": "p4TZGG3",
+    "created_at": "2021-08-04T16:05:04Z",
+    "updated_at": "2021-08-04T16:05:04Z",
+    "embed_version": "4.5.9",
+    "published_at": null,
+    "fields": [
+      {
+        "id": 130538,
+        "dataColumn": {
+          "key": "first_name",
+          "label": "First name",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 0,
+        "type": "text",
+        "stepId": 157487,
+        "default": "",
+        "label": "First name",
+        "placeholder": "",
+        "description": null,
+        "enum": null,
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+        },
+        "validations": [
+          {
+            "metadata": {
+              "hiddenInApp": true
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank"
+          }
+        ],
+        "sensitive": null,
+        "preset": "first_name",
+        "autotag": null
+      },
+      {
+        "id": 610185,
+        "dataColumn": {
+          "key": "last_name",
+          "label": "Last name",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 1,
+        "type": "text",
+        "stepId": 157487,
+        "default": "",
+        "label": "Last name",
+        "placeholder": "",
+        "description": null,
+        "enum": null,
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+        },
+        "validations": [
+          {
+            "metadata": {
+              "hiddenInApp": true
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank"
+          }
+        ],
+        "sensitive": null,
+        "preset": "last_name",
+        "autotag": null
+      },
+      {
+        "id": 162810,
+        "dataColumn": {
+          "key": "email",
+          "label": "Email address",
+          "dataType": "email"
+        },
+        "parentId": null,
+        "position": 2,
+        "type": "email",
+        "stepId": 157487,
+        "default": "",
+        "label": "Email address",
+        "placeholder": "",
+        "description": null,
+        "enum": null,
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+        },
+        "validations": [
+          {
+            "operator": "is_valid_email",
+            "comparand": null,
+            "errorMessage": "Please provide a valid email address"
+          },
+          {
+            "metadata": {
+              "hiddenInApp": true
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank"
+          }
+        ],
+        "sensitive": null,
+        "preset": "email_address",
+        "autotag": null
+      },
+      {
+        "id": 107281,
+        "dataColumn": {
+          "key": "password",
+          "label": "Password",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 3,
+        "type": "text",
+        "stepId": 157487,
+        "default": "",
+        "label": "Password",
+        "placeholder": "",
+        "description": null,
+        "enum": null,
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+        },
+        "validations": [
+          {
+            "metadata": {
+              "hiddenInApp": true
+            },
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank"
+          },
+          {
+            "metadata": {
+              "mandatory": true,
+              "staticOperator": true,
+              "comparandFieldProps": {
+                "min": 5
+              }
+            },
+            "operator": "longer_than",
+            "comparand": 5,
+            "errorMessage": "Password is too short"
+          }
+        ],
+        "sensitive": true,
+        "preset": "password",
+        "autotag": null
+      },
+      {
+        "id": 958204,
+        "dataColumn": {
+          "key": "phone",
+          "label": "Phone number",
+          "dataType": "phone"
+        },
+        "parentId": null,
+        "position": 4,
+        "type": "phone",
+        "stepId": 157487,
+        "default": "",
+        "label": "Phone number",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "defaultCountryCode": "UA"
+        },
+        "validations": [
+          {
+            "operator": "is_valid",
+            "comparand": null,
+            "errorMessage": "Please provide a valid phone number"
+          }
+        ],
+        "sensitive": null,
+        "preset": "phone_number",
+        "autotag": null
+      }
+    ],
+    "steps": [
+      {
+        "id": 157487,
+        "title": "Step 1",
+        "description": ""
+      }
+    ],
+    "rules": [
+
+    ]
+  }
+}
