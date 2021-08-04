@@ -2095,3 +2095,6 @@ details-disclosure > details {
 .banner__box.color-background-1 {
   border: 1px solid green;
 }
+
+
+.test-badge{right:6px !important;top:6px !important;position:absolute !important;border-radius:4rem;font-size:1.2rem;line-height:1;padding:.6rem 1.3rem;background-color:#fff;border:1px solid #000}
