@@ -42,7 +42,7 @@
     {% render 'meta-tags' %}
 
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
-    {{ content_for_header }}
+    {% include 'globo.filter.script' %}{{ content_for_header }}
 
 
     {%- liquid
@@ -171,5 +171,6 @@
     {{ 'owl.carousel.js'  | asset_url | script_tag }}
     {{ 'react-component.js' | asset_url | script_tag }}
 
-  </body>
+  {% include 'globo.filter.action' %}
+	</body>
 </html>
