@@ -78,6 +78,10 @@
             4 Sale
           {% endcomment %}
           
+<<<<<<< HEAD
+=======
+          
+>>>>>>> 270c5b74ce47278a37a39c62f49490aad076a962
           {% assign date_now = 'now' | date: '%s' %}
           {% assign date_published = product_card_product.created_at | date: '%s' %}
           {% assign date_difference = date_now | minus: date_published %}
@@ -121,7 +125,11 @@
            {% endcomment %}
 
         </div>
+<<<<<<< HEAD
         {{ date_now | date: '%Y.%m.%d' }} - {{ date_published | date: '%Y.%m.%d' }} = {{ date_difference_ }}
+=======
+          {{ date_now | date: '%Y.%m.%d' }} - {{ date_published | date: '%Y.%m.%d' }} = {{ date_difference_ }} 
+>>>>>>> 270c5b74ce47278a37a39c62f49490aad076a962
 
 
         <div class="card__badge">
