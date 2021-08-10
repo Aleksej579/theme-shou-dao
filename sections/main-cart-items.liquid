@@ -216,6 +216,15 @@
 
     <p class="visually-hidden" id="cart-live-region-text" aria-live="polite" role="status"></p>
     <p class="visually-hidden" id="shopping-cart-line-item-status" aria-live="polite" aria-hidden="true" role="status">{{ 'accessibility.loading' | t }}</p>
+    
+
+    <p class="cart-attribute__field">
+      <label for="your-name">Your name</label>
+      <textarea id="your-name" name="attributes[Your name]">{{ cart.attributes["Your name"] }}</textarea>
+    </p>
+    
+    {{ cart.attributes["Your name"] }}
+    
   </form>
 </cart-items>
 
