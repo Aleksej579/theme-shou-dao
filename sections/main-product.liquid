@@ -142,24 +142,18 @@
             </div>
         
          <form name="engraving" method="post" action="">
-          <p>
-           <input type="radio" name="show_engraving" value="s_engraving">Add an engraving<br>
-           <input type="radio" name="hide_engraving" value="h_engraving">Hide an engraving<br>
-          </p>
+          <div>
+            <input type="radio" id="contactChoice1" name="contact" value="email">
+            <label for="contactChoice1">Add an engraving</label>
+            <input type="radio" id="contactChoice2" name="contact" value="phone">
+            <label for="contactChoice2">Hide an engraving</label>
+          </div>
+           
           <input type="text" size="40">
           <input type="submit" value="Отправить">
          </form>
         
-        <div>
-          <input type="radio" id="contactChoice1" name="contact" value="email">
-          <label for="contactChoice1">Email</label>
 
-          <input type="radio" id="contactChoice2" name="contact" value="phone">
-          <label for="contactChoice2">Phone</label>
-
-          <input type="radio" id="contactChoice3" name="contact" value="mail">
-          <label for="contactChoice3">Mail</label>
-        </div>
         
         
           {%- when 'popup' -%}
