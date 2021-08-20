@@ -154,7 +154,7 @@
          </form>
         
         
-        {{ variant.price | money | strip_html }}
+        <dl class="price{% if available and compare_at_price > price %} price--on-sale{% endif %}" data-price>
         
 
         
