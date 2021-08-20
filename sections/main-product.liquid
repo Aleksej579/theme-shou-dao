@@ -141,7 +141,7 @@
               </quantity-input>
             </div>
         
-         <form name="engraving" method="post" action="">
+         <form name="engraving" method="post" action="/cart/add">
           <div>
             <input type="radio" id="contactChoice1" name="contact" value="email">
             <label for="contactChoice1">Add an engraving</label>
@@ -152,10 +152,6 @@
           <input type="text" size="40">
           <input type="submit" value="submit ">
          </form>
-        
-                    <div class="no-js-hidden" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
-              {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
-            </div>
         
         
         
