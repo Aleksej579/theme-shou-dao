@@ -48,6 +48,13 @@
           "type": "description",
           "settings": {
           }
+        },
+        "5c3356d9-8cb3-45e1-9b9a-7ade24ada875": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.global.new.value }}",
+            "text_style": "body"
+          }
         }
       },
       "block_order": [
@@ -58,7 +65,8 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description"
+        "description",
+        "5c3356d9-8cb3-45e1-9b9a-7ade24ada875"
       ],
       "settings": {
         "enable_sticky_info": false,
