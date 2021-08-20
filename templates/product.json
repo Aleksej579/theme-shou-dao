@@ -60,13 +60,6 @@
             "text": "{{ product.metafields.my_fields.engraving.value }}",
             "text_style": "body"
           }
-        },
-        "de22f3ec-dba0-47c3-9b24-91539d2a9856": {
-          "type": "popup",
-          "settings": {
-            "link_label": "Pop-up link text",
-            "page": "privacy-policy"
-          }
         }
       },
       "block_order": [
@@ -79,8 +72,7 @@
         "buy_buttons",
         "description",
         "share",
-        "316e5d58-8fad-4b64-9f04-1b90ee9ddd6e",
-        "de22f3ec-dba0-47c3-9b24-91539d2a9856"
+        "316e5d58-8fad-4b64-9f04-1b90ee9ddd6e"
       ],
       "settings": {
         "enable_sticky_info": true,
