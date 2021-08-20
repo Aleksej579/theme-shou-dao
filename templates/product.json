@@ -67,6 +67,7 @@
     },
     "product-recommendations": {
       "type": "product-recommendations",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "image_ratio": "adapt",
@@ -77,6 +78,7 @@
     },
     "1627215339b2876973": {
       "type": "image-banner",
+      "disabled": true,
       "blocks": {
         "1627215339b2876973-0": {
           "type": "heading",
