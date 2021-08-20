@@ -154,7 +154,8 @@
          </form>
         
         
-        <dl class="price{% if available and compare_at_price > price %} price--on-sale{% endif %}" data-price>
+        <p>{%- assign price = variant.price -%}</p>
+<p>{%- assign money_price = price | money -%}</p>
         
 
         
