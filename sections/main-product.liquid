@@ -141,6 +141,8 @@
               </quantity-input>
             </div>
         
+        
+        
          <form name="engraving" method="post" action="/cart/add">
           <div>
             <input type="radio" id="contactChoice1" name="contact" value="email">
@@ -149,7 +151,7 @@
             <label for="contactChoice2">Hide an engraving</label>
           </div>
            
-          <input type="text" size="40">
+          <input type="text" size="40" form="product-form-{{ section.id }}">
           <input type="submit" value="submit ">
          </form>
         
