@@ -155,10 +155,11 @@
           <input type="submit" value="submit ">
          </form>
         
+        {{ products.product.quantity | plus: 10000 }}
+        
+        
         {{ product.price  }}
-        
-        {{ product.price  | plus: 10000  }}
-        
+        {{ product.price  | plus: 10000  }} 
         {{ product.price  }}
 
         
