@@ -30,8 +30,8 @@
             </thead>
             <tbody role="rowgroup">
               
-              <p>Count order {{ customer.orders }}</p>
-              <p>Count order {{ order.fulfillment_status }}</p>
+              <p>Count order - {{ customer.orders }}</p>
+              <p>Count order - {{ customer.order.fulfillment_status }}</p>
               
               
               {%- for order in customer.orders -%}
