@@ -33,11 +33,11 @@
               
               <div>
                 {% assign order_unfulfilled = customer.orders | where: "fulfillment_status_label", "Unfulfilled" %}
-                {% for order in order_unfulfilled %}
                 <ul>
+                {% for order in order_unfulfilled %}
                   <li>{{ order.fulfillment_status_label }}</li>
-                </ul>
                 {% endfor %}
+                </ul>
               </div>
               
               
