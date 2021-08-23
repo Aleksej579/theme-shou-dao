@@ -30,9 +30,7 @@
             </thead>
             <tbody role="rowgroup">
               
-             English: {{ order.fulfillment_status }}
-
-French: {{ order.fulfillment_status_label }}
+             English: {{ customer.orders.fulfillment_status }}
               
               
               {%- for order in customer.orders -%}
