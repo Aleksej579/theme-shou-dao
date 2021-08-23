@@ -436,7 +436,7 @@
           	let countOrderNumber = countOrder.childElementCount;
           	let wrapp_countOrder = document.querySelector('.orders_in_progress')
             let spanCount = document.createElement("<span>");
-            wrapp_countOrder
+            wrapp_countOrder.insertBefore(spanCount);
           
 			console.log(countOrderNumber)
             
