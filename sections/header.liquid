@@ -429,16 +429,16 @@
                   <li style='height: 0;'>{{ order.fulfillment_status_label }}</li>
               {% endfor %}
           </ul>
+          <span></span>
 		</div>
               
         <script>
           	let countOrder = document.querySelector('.orders_in_progress ul')
           	let countOrderNumber = countOrder.childElementCount;
           
-          	let wrapp_countOrder = document.querySelector('.orders_in_progress')
-
-            console.log(wrapp_countOrder)
-            wrapp_countOrder.appendChild('10');
+          	let wrapp_countOrder = document.querySelector('.orders_in_progress span')
+            
+            wrapp_countOrder.innerHTML = countOrderNumber
 			console.log(countOrderNumber)
             
 		</script>
