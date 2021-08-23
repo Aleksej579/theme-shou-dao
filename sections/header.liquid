@@ -422,7 +422,7 @@
       
 
 
-		<div class='orders_in_progress' style='visibility: hidden'>
+		<div class='orders_in_progress' style='visibility: hidden; display: flex; align-items: center; flex-direction: column;'>
           {% assign order_unfulfilled = customer.orders | where: "fulfillment_status_label", "Unfulfilled" %}
           <ul style='padding: 0; margin: 0;'>
               {% for order in order_unfulfilled %}
