@@ -35,6 +35,7 @@
               {% for order in order_unfulfilled %}
               	{{ order.fulfillment_status_label }} <br>
               {% endfor %}
+              {{ customer.orders.count }}
               {{ order_unfulfilled.count }}
               
               
