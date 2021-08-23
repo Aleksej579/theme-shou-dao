@@ -141,7 +141,9 @@
               </quantity-input>
             </div>
         
-                    <div class="product-form__input product-form__quantity" {{ block.shopify_attributes }}>
+        
+           {%- when 'quantity_selector' -%}
+            <div class="product-form__input product-form__quantity" {{ block.shopify_attributes }}>
               <label class="form__label" for="Quantity-{{ section.id }}">
                 {{ 'products.product.quantity.label' | t }}
               </label>
@@ -164,6 +166,7 @@
                 </button>
               </quantity-input>
             </div>
+        
         
         
         
