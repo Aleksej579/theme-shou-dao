@@ -434,8 +434,10 @@
         <script>
           	let countOrder = document.querySelector('.orders_in_progress ul')
           	let countOrderNumber = countOrder.childElementCount;
+          
           	let wrapp_countOrder = document.querySelector('.orders_in_progress')
             let spanCount = document.createElement("<span>");
+          
           	spanCount.innerHTML = `${countOrderNumber}`;
             wrapp_countOrder.appendChild(spanCount);
           
