@@ -422,11 +422,11 @@
       
 
 
-		<div class='orders_in_progress'>
+		<div class='orders_in_progress' style='visibility: hidden'>
           {% assign order_unfulfilled = customer.orders | where: "fulfillment_status_label", "Unfulfilled" %}
           <ul>
               {% for order in order_unfulfilled %}
-                  <li style='visibility: hidden'>{{ order.fulfillment_status_label }}</li>
+                  <li>{{ order.fulfillment_status_label }}</li>
               {% endfor %}
           </ul>
 		</div>
