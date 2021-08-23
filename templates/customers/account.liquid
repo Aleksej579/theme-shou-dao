@@ -30,15 +30,7 @@
             </thead>
             <tbody role="rowgroup">
               
-              
-              <div>
-                {% assign order_unfulfilled = customer.orders | where: "fulfillment_status_label", "Unfulfilled" %}
-                <ul>
-                {% for order in order_unfulfilled %}
-                  <li>{{ order.fulfillment_status_label }}</li>
-                {% endfor %}
-                </ul>
-              </div>
+             
               
               
               {%- for order in customer.orders -%}
