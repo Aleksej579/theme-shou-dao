@@ -31,11 +31,14 @@
             <tbody role="rowgroup">
               
               
-              {% assign order_unfulfilled = customer.orders | where: "fulfillment_status_label", "Unfulfilled" %}
-              {% for order in order_unfulfilled %}
-              	{{ order.fulfillment_status_label }} <br>
-              {% endfor %}
-              
+              <div>
+                {% assign order_unfulfilled = customer.orders | where: "fulfillment_status_label", "Unfulfilled" %}
+                {% for order in order_unfulfilled %}
+                <ul>
+                  <li>{{ order.fulfillment_status_label }}</li>
+                </ul>
+                {% endfor %}
+              </div>
               
               
               {%- for order in customer.orders -%}
