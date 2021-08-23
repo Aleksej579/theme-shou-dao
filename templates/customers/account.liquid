@@ -37,7 +37,7 @@
               	
               {% endfor %}
               
-              {{ customer.orders_count }}
+              {{ customer.orders_count | where: "fulfillment_status_label", "Unfulfilled" }}
               
               
               {%- for order in customer.orders -%}
