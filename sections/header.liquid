@@ -424,7 +424,7 @@
 
 		<div class='orders_in_progress' style='visibility: hidden'>
           {% assign order_unfulfilled = customer.orders | where: "fulfillment_status_label", "Unfulfilled" %}
-          <ul>
+          <ul style='padding: 0; margin: 0;'>
               {% for order in order_unfulfilled %}
                   <li>{{ order.fulfillment_status_label }}</li>
               {% endfor %}
