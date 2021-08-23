@@ -400,8 +400,6 @@
           </span>
         </a>
       {%- endif -%}
-              
-              <p>test</p>
 
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link link--text focus-inset" id="cart-icon-bubble">
         {%- liquid
@@ -421,6 +419,17 @@
           </div>
         {%- endif -%}
       </a>
+      
+              <p>test</p>
+              
+              <div>
+                {% assign order_unfulfilled = customer.orders | where: "fulfillment_status_label", "Unfulfilled" %}
+                <ul>
+                  {% for order in order_unfulfilled %}
+                  <li>{{ order.fulfillment_status_label }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
     </div>
   </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
