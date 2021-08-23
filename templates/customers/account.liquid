@@ -34,6 +34,12 @@
               	{{ order.fulfillment_status_label }}
               {%- endfor -%}
               
+              {% assign kitchen_products = customer.orders | where: "fulfillment_status_label", "Unfulfilled" %}
+
+              {% for product in kitchen_products %}
+              - {{ product.title }}
+              {% endfor %}
+              
               
               {%- for order in customer.orders -%}
                 <tr role="row">
