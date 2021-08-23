@@ -29,7 +29,9 @@
               </tr>
             </thead>
             <tbody role="rowgroup">
-              <p>Count order {{ customer.orders }}</p>
+              
+              <p>Count order {{ customer.orders_count }}</p>
+              
               {%- for order in customer.orders -%}
                 <tr role="row">
                   <td
