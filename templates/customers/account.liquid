@@ -30,7 +30,7 @@
             </thead>
             <tbody role="rowgroup">
               
-              {%- for order in customer.orders -%}
+              {%- for order in customer.orders | where: "type", "Unfulfilled" -%}
               	{{ order.fulfillment_status_label }}
               {%- endfor -%}
               
