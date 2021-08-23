@@ -422,7 +422,7 @@
       
 
               
-		{%- if shop.customer_accounts_enabled -%}
+		{%- if customer.accepts_marketing -%}
 
           <div class='orders_in_progress' style='visibility: hidden; display: flex; align-items: center; flex-direction: column; justify-content: center;'>
             {% assign order_unfulfilled = customer.orders | where: "fulfillment_status_label", "Unfulfilled" %}
@@ -442,7 +442,6 @@
           </script>
              
 		{%- endif -%}
-              {{ customer.accepts_marketing }}
               
               
     </div>
