@@ -421,6 +421,8 @@
       </a>
       
 
+              
+		{%- if shop.customer_accounts_enabled -%}
 
 		<div class='orders_in_progress' style='visibility: hidden; display: flex; align-items: center; flex-direction: column; justify-content: center;'>
           {% assign order_unfulfilled = customer.orders | where: "fulfillment_status_label", "Unfulfilled" %}
@@ -435,13 +437,13 @@
         <script>
           	let countOrder = document.querySelector('.orders_in_progress ul')
           	let countOrderNumber = countOrder.childElementCount;
-          
           	let wrapp_countOrder = document.querySelector('.orders_in_progress span')
-            
             wrapp_countOrder.innerHTML = `Orders in progress: ${countOrderNumber}`
-			console.log(countOrderNumber)
-            
 		</script>
+             
+		{%- endif -%}
+              
+              
     </div>
   </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
