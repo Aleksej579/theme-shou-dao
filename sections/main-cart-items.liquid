@@ -68,17 +68,55 @@
                     
                     
                     
+                                      {% unless item.product.has_only_default_variant %}
+                    <br>
+                    <small>{{ item.variant.title }}</small>
+                  {% endunless %}
+
+                  {% unless item.selling_plan_allocation == nil %}
+                    <br>
+                    <small>{{ item.selling_plan_allocation.selling_plan.name }}</small>
+                  {% endunless %}
+
+                  {% comment %}
+                    Optional, loop through custom product line items if available
+
+                    For more info on line item properties, visit:
+                      - http://docs.shopify.com/support/your-store/products/how-do-I-collect-additional-information-on-the-product-page-Like-for-a-monogram-engraving-or-customization
+                  {% endcomment %}
+                  {% assign propertySize = item.properties | size %}
+                  {% if propertySize > 0 %}
+                    {% for p in item.properties %}
+                      {% assign first_character_in_key = p.first | truncate: 1, '' %}
+                      {% unless p.last == blank or first_character_in_key == '_' %}
+                        <br>
+                        <small>{{ p.first }}: </small>
+
+                        {% comment %}
+                          Check if there was an uploaded file associated
+                        {% endcomment %}
+                        {% if p.last contains '/uploads/' %}
+                          <a href="{{ p.last }}"><small>{{ p.last | split: '/' | last }}</small></a>
+                        {% else %}
+                          <small>{{ p.last }}</small>
+                        {% endif %}
+
+                      {% endunless %}
+                    {% endfor %}
+                  {% endif %}
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                                         
-					{% unless item.product.has_only_default_variant %}
-                    	<br>
-                    	<small>{{ item.variant.title }}</small>
-                    {% endunless %}
 
-                    {% unless item.selling_plan_allocation == nil %}
-                    	<br>
-                    	<small>{{ item.selling_plan_allocation.selling_plan.name }}</small>
-                    {% endunless %}
 
                     
                     
