@@ -70,12 +70,12 @@
                     
                                       {% unless item.product.has_only_default_variant %}
                     <br>
-                    <small>{{ item.variant.title }}</small>
+                    <small>{{ item.variant.title }}3333333</small>
                   {% endunless %}
 
                   {% unless item.selling_plan_allocation == nil %}
                     <br>
-                    <small>{{ item.selling_plan_allocation.selling_plan.name }}</small>
+                    <small>{{ item.selling_plan_allocation.selling_plan.name }}44444444</small>
                   {% endunless %}
 
                   {% comment %}
@@ -90,7 +90,7 @@
                       {% assign first_character_in_key = p.first | truncate: 1, '' %}
                       {% unless p.last == blank or first_character_in_key == '_' %}
                         <br>
-                        <small>{{ p.first }}: </small>
+                        <small>{{ p.first }}: 55555555</small>
 
                         {% comment %}
                           Check if there was an uploaded file associated
