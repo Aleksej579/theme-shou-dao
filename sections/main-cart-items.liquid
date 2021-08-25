@@ -54,13 +54,9 @@
                       <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
                     {%- endif -%}
                     
-                    <p>test {{ item.properties.first }}</p>
+                    <p>test {{ cart.attributes }}</p>
                     
-                    <p class="cart-attribute__field">
-  <label for="your-name">Your name</label>
-  <input id="your-name" type="text" name="attributes[Your name]" value="{{ cart.attributes["Your name"] }}">
-</p>
-                    
+            
 
                   {% assign propertySize = item.properties | size %}
 
