@@ -63,7 +63,7 @@
                       - http://docs.shopify.com/support/your-store/products/how-do-I-collect-additional-information-on-the-product-page-Like-for-a-monogram-engraving-or-customization
                   {% endcomment %}
                   {% assign propertySize = item.properties | size %}
-                  {% if propertySize > 0 %}
+
                     {% for p in item.properties %}
                       {% assign first_character_in_key = p.first | truncate: 1, '' %}
                       {% unless p.last == blank or first_character_in_key == '_' %}
@@ -81,7 +81,7 @@
 
                       {% endunless %}
                     {% endfor %}
-                  {% endif %}
+
                     
                     <hr>
                     
