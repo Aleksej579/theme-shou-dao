@@ -58,35 +58,30 @@
                     
                     <hr>
                     <p>test {{ cart.items.item }}</p>
+                    
+                    
+                    {% assign property_size = item.properties | size %}
+                    {% if property_size > 0 %}
+                      {% for p in item.properties %}
+                        {% assign first_character_in_key = p.first | truncate: 1, '' %}
+                        {% unless p.last == blank or first_character_in_key == '_' %}
+                          {{ p.first }}:
+                          {% if p.last contains '/uploads/' %}
+                            <a class="lightbox" href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
+                          {% else %}
+                            {{ p.last }}
+                          {% endif %}
+                          <br>
+                        {% endunless %}
+                      {% endfor %}
+                    {% endif %}
+                    
+                    
                     <hr>
 
                     
-                    
-                    
+
                     <a href="{{ item.product.url }}" class="cart-item__name break">{{ item.product.title | escape }}</a>
-                    
-                    
-                    <p>ghghghghghghghghghg</p>
-                    
-                    
-                   {% assign property_size = item.properties | size %}
-{% if property_size > 0 %}
-  {% for p in item.properties %}
-    {% assign first_character_in_key = p.first | truncate: 1, '' %}
-    {% unless p.last == blank or first_character_in_key == '_' %}
-      {{ p.first }}:
-      {% if p.last contains '/uploads/' %}
-        <a class="lightbox" href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
-      {% else %}
-        {{ p.last }}
-      {% endif %}
-      <br>
-    {% endunless %}
-  {% endfor %}
-{% endif %}
-                    
-                    
-                    
 
                     {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != nil -%}
                       <dl>
