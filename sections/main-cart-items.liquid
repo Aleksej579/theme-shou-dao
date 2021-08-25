@@ -54,14 +54,9 @@
                       <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
                     {%- endif -%}
                     
-                    <p>test {{ item.properties | price }}</p>
+                    <p>test {{ item.properties | size }}</p>
                     
-                   {% comment %}
-                    Optional, loop through custom product line items if available
 
-                    For more info on line item properties, visit:
-                      - http://docs.shopify.com/support/your-store/products/how-do-I-collect-additional-information-on-the-product-page-Like-for-a-monogram-engraving-or-customization
-                  {% endcomment %}
                   {% assign propertySize = item.properties | size %}
 
                     {% for p in item.properties %}
