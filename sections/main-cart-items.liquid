@@ -56,6 +56,11 @@
                     
                     <p>test {{ item.properties.first }}</p>
                     
+                    <p class="cart-attribute__field">
+  <label for="your-name">Your name</label>
+  <input id="your-name" type="text" name="attributes[Your name]" value="{{ cart.attributes["Your name"] }}">
+</p>
+                    
 
                   {% assign propertySize = item.properties | size %}
 
