@@ -57,7 +57,7 @@
                     
                     
                     <hr>
-                    <p>test {{ cart.items.item }}</p>
+                    <p>test {{ item.product.title | escape }}</p>
                     
                     
                     {% assign property_size = item.properties | size %}
