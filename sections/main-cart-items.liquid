@@ -59,6 +59,18 @@
                     
                     <p>test {{ item.properties.engraving }}</p>
                     
+                    
+                    
+
+{% for property in product.properties %}
+  {{property.name}}: {% for item in property.characteristics %}{{item.name}},{% endfor %}
+{% endfor %}
+
+Так же можно обращаться к параметру напрямую, зная его пермалинк (handle):
+
+{{ product.properties.handle.characteristics.first.name }}
+
+                    
             
 
                   {% assign propertySize = item.properties | size %}
