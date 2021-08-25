@@ -292,26 +292,17 @@
                 {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                 
-                
-                
-                
-                
-                
-                
-          <p class="line-item-property__field">
-            <label for="engraved">Engraved</label>
-            <input id="engraved" type="text" name="properties[Engraved]">
-          </p>
-
-          
-                
-                
-                
-                
-                
-                
-
                   <div class="product-form__buttons">
+                    
+                    
+                    
+                    <p class="line-item-property__field">
+                      <label for="engraved">Engraved</label>
+                      <input id="engraved" type="text" name="properties[Engraved]">
+                    </p>
+
+                    
+                    
                     <button
                       type="submit"
                       name="add"
