@@ -172,5 +172,9 @@
     {{ 'react-component.js' | asset_url | script_tag }}
 
   {% include 'globo.filter.action' %}
-	{% if content_for_header contains 'product_label' %}{% include 'bss-product-label-js' %}{% endif %}</body>
+	{% if content_for_header contains 'product_label' %}{% include 'bss-product-label-js' %}{% endif %}
+<!-- **BEGIN** Hextom QAB Integration // Main Include - DO NOT MODIFY -->
+    {% render 'hextom_qab_main', product: product, customer: customer %}
+    <!-- **END** Hextom QAB Integration // Main Include - DO NOT MODIFY -->
+</body>
 </html>
