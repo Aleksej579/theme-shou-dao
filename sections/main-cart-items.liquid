@@ -118,7 +118,7 @@
                       
                     <p class="">
                       <input id="metafielaBrowser" type="text" name="properties[metafielaBrowser]">
-                      <input id="your-name" type="text" name="attributes[metafielaBrowser]" value="{{ cart.attributes["metafielaBrowser"] }}">
+                      <input id="metafielaBrowser_2" type="text" name="attributes[metafielaBrowser]" value="{{ cart.attributes["metafielaBrowser"] }}">
                     </p>
                     
                     <script>
@@ -130,9 +130,12 @@
                       var isIE = /*@cc_on!@*/false || !!document.documentMode;   // At least IE6
                       
                       let inp = document.querySelector('#metafielaBrowser')
+                      let inp_2 = document.querySelector('#metafielaBrowser_2')
+
 
                       if (isFirefox) {
                         inp.value = 'hello! i am firefox';
+                        inp_2.value = 'hello! i am firefox';
                         
                       }
                       if (isChrome) {
