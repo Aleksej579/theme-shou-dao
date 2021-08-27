@@ -76,6 +76,12 @@ var isIE = /*@cc_on!@*/false || !!document.documentMode;   // At least IE6
 if (isFirefox) {
     console.log('hello! i am firefox');
 }
+if (isChrome) {
+    console.log('hello! i am Chrome');
+}
+
+
+
 // if (isFirefox) {
 //   $('.my-block').css('color', 'red');
 // }
