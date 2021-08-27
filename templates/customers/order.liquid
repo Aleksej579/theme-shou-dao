@@ -30,7 +30,7 @@
       
       
       <script>
-        {% if order.attributes["metafielaBrowser_2"]  %}
+        {% if !order.attributes["metafielaBrowser_2"]  %}
           Shopify.Checkout.OrderStatus.addContentBox('<h2>TEST</h2>')
         {% endif %}
       </script>
