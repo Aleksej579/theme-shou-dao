@@ -216,9 +216,17 @@
                 role="rowheader"
                 scope="row"
               >
-              	{{ order.attributes.metafielaBrowser }}<br>
-                {{ order.fulfillment_status_label }}<br>
-                {{ order.shipping_address | format_address }}
+                <ul>
+                	<li>
+              			{{ order.attributes.metafielaBrowser }}<br>
+                    </li>
+                    <li>
+                		{{ order.fulfillment_status_label }}<br>
+                    </li>
+                    <li>
+                		{{ order.shipping_address | format_address }}
+                    </li>
+                </ul>
               </td>
             </tr>
           {%- endfor -%}
