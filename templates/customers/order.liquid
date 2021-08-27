@@ -25,7 +25,7 @@
       
       
      
-      <p>What kind of browser? - {{ order.attributes.metafielaBrowser }}</p>
+      
 
 
 
@@ -38,7 +38,8 @@
             <th id="ColumnPrice" scope="col" role="columnheader">{{ 'customer.order.price' | t }}</th>
             <th id="ColumnQuantity" scope="col" role="columnheader">{{ 'customer.order.quantity' | t }}</th>
             <th id="ColumnTotal" scope="col" role="columnheader">{{ 'customer.order.total' | t }}</th>
-            <th id="ColumnTotal" scope="col" role="columnheader"><a href="/a/returns?order={{order.order_number}}&email={{customer.email}}"> Request a return </a></th>
+            <th id="" scope="col" role="columnheader"><p>What kind of browser? - {{ order.attributes.metafielaBrowser }}</p></th>
+            <th id="" scope="col" role="columnheader"><a href="/a/returns?order={{order.order_number}}&email={{customer.email}}"> Request a return </a></th>
           </tr>
         </thead>
         <tbody role="rowgroup">
