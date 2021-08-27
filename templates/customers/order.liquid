@@ -38,7 +38,7 @@
             <th id="ColumnPrice" scope="col" role="columnheader">{{ 'customer.order.price' | t }}</th>
             <th id="ColumnQuantity" scope="col" role="columnheader">{{ 'customer.order.quantity' | t }}</th>
             <th id="ColumnTotal" scope="col" role="columnheader">{{ 'customer.order.total' | t }}</th>
-            <th id="" scope="col" role="columnheader">What kind of browser? - {{ order.attributes.metafielaBrowser }}</th>
+            <th id="" scope="col" role="columnheader">What kind of browser? <br> {{ order.attributes.metafielaBrowser }}</th>
             <th id="ColumnTotal" scope="col" role="columnheader"><a href="/a/returns?order={{order.order_number}}&email={{customer.email}}"> Request a return </a></th>
           </tr>
         </thead>
