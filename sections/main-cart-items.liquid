@@ -128,9 +128,12 @@
                       var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0; // At least Safari 3+: "[object HTMLElementConstructor]"
                       var isChrome = !!window.chrome && !isOpera;              // Chrome 1+
                       var isIE = /*@cc_on!@*/false || !!document.documentMode;   // At least IE6
+                      
+                      let inp = document.querySelector('#metafielaBrowser')
 
                       if (isFirefox) {
                       	console.log('hello! i am firefox');
+                        inp.innerHTML = 'hello! i am firefox'
                         
                       }
                       if (isChrome) {
