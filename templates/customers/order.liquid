@@ -218,10 +218,10 @@
               >
                 <ul>
                 	<li>
-              			Browser: {{ order.attributes.metafielaBrowser }}<br>
+                      Browser: <i>{{ order.attributes.metafielaBrowser }}</i>
                     </li>
                     <li>
-                		Status: {{ order.fulfillment_status_label }}<br>
+                      Status: <i>{{ order.fulfillment_status_label }}</i>
                     </li>
                     <li>
                 		{{ order.shipping_address | format_address }}
