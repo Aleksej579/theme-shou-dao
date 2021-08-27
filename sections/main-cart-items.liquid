@@ -121,9 +121,8 @@
                       <input id="metafielaBrowser" type="text" name="properties[metafielaBrowser]">
                     </p>
                     
-                    {% for attribute in attributes %}
-                    <p>test - {{ attribute | first }}: {{ attribute | last }}</p><br>
-                    {% endfor %}
+
+                    <p> test - {{ cart.attributes["metafielaBrowser"] }}</p>
                       
                     <script>
                       
