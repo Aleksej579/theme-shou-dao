@@ -27,13 +27,10 @@
       
       <p> test - {{ cart.properties.metafielaBrowser }}</p>
       <p> test - {{ attributes.metafielaBrowser_2 }}</p>
+      <p> test - {{ order.attributes.metafielaBrowser }}</p>
       
       
-      <script>
-        {% if order.attributes["metafielaBrowser"]  %}
-          Shopify.Checkout.OrderStatus.addContentBox('<h2>TEST</h2>')
-        {% endif %}
-      </script>
+      
       
 
       <table role="table" class="order-details">
