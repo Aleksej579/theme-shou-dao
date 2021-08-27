@@ -47,14 +47,6 @@
             <tr role="row">
               <td
                 id="Row{{ line_item.key }}"
-                headers="ColumnBrowser"
-                role="rowheader"
-                scope="row"
-              >
-               {{ order.attributes.metafielaBrowser }}
-              </td>
-              <td
-                id="Row{{ line_item.key }}"
                 headers="ColumnProduct"
                 role="rowheader"
                 scope="row"
@@ -217,6 +209,14 @@
                 {%- else -%}
                   {{ line_item.original_line_price | money }}
                 {%- endif -%}
+              </td>
+              <td
+                id="Row{{ line_item.key }}"
+                headers="ColumnBrowser"
+                role="rowheader"
+                scope="row"
+              >
+               {{ order.attributes.metafielaBrowser }}
               </td>
             </tr>
           {%- endfor -%}
