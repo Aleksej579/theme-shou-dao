@@ -120,6 +120,10 @@
 <!--                  <label for="metafielaBrowser">Engraved</label> -->
                       <input id="metafielaBrowser" type="text" name="properties[metafielaBrowser]">
                     </p>
+                    
+                    {% for attribute in attributes %}
+                    	{{ attribute | first }}: {{ attribute | last }}<br>
+                    {% endfor %}
                       
                     <script>
                       
