@@ -8,7 +8,6 @@ $('slider-component .ul_ li').each(function () {
 
 $('slider-component .ul_').find('.li_').wrapAll("<div class='owl-carousel owl-theme'></div>");
 
-console.log('test succes connect')
 
 
 $(document).ready(function () {
