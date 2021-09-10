@@ -1,14 +1,10 @@
 $('slider-component ul.multicolumn-list').each(function () {
     $(this).replaceWith($('<div class="ul_">' + this.innerHTML + '</div>'));
 });
-
 $('slider-component .ul_ li').each(function () {
     $(this).replaceWith($('<div class="li_">' + this.innerHTML + '</div>'));
 });
-
 $('slider-component .ul_').find('.li_').wrapAll("<div class='owl-carousel owl-theme'></div>");
-
-
 
 $(document).ready(function () {
     $(".owl-carousel").owlCarousel(
@@ -18,7 +14,6 @@ $(document).ready(function () {
             margin: 10,
             autoplay: true,
             autoplayTimeout: 10000,
-            // autoplayHoverPause: true,
             responsive: {
                 320: {
                     items: 1,
@@ -37,52 +32,30 @@ $(document).ready(function () {
     );
 });
 
-// Logic-badge
-// let li = document.querySelectorAll("ul#main-collection-product-grid li")
-// console.log(li)
-// li.forEach((item) => {
-//     let list_span = item.querySelectorAll('.test-badge')[0].children
-//     console.log(list_span)
-//     for (let it of list_span) {
 
-//         it.style.display = "none";
+// Open QB
+let btn_open_qb = document.querySelector('#btn_open_qb');
+let qb_popup = document.querySelector('#qb');
+let form_add = document.querySelector('#add-item-form .wrapper_prod');
 
-//         if (it.className == 'badge-test badge-closeout') {
-//             console.log('badge-closeout')
-//             it.style.display = "block";
+btn_open_qb.onclick = function () {
+    form_add.innerHTML = ''
+    qb_popup.style.display = 'block'
+};
 
-//         } else if (it.className == 'badge-test badge-new') {
-//             console.log('badge-new')
-//             it.style.display = "block";
-
-//         } else if (it.className == 'badge-test badge-free_shipping') {
-//             console.log('badge-free_shipping')
-//             it.style.display = "block";
-
-//         } else if (it.className == 'badge-test badge-sale') {
-//             console.log('badge-sale')
-//             it.style.display = "block";
-
-//         }
-//     }
-// });
-
-
-// var isOpera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0; // Opera 8.0+ (UA detection to detect Blink/v8-powered Opera)
-// var isFirefox = typeof InstallTrigger !== 'undefined';   // Firefox 1.0+
-// var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0; // At least Safari 3+: "[object HTMLElementConstructor]"
-// var isChrome = !!window.chrome && !isOpera;              // Chrome 1+
-// var isIE = /*@cc_on!@*/false || !!document.documentMode;   // At least IE6
-
-// if (isFirefox) {
-//     console.log('hello! i am firefox');
-// }
-// if (isChrome) {
-//     console.log('hello! i am Chrome');
-// }
-
-
-
-// if (isFirefox) {
-//   $('.my-block').css('color', 'red');
-// }
+//quickBuy
+let search_qb = document.querySelector('.wrapper_search .search_qb');
+let btn_show_item = document.querySelector('.wrapper_search #btn_search_qb');
+let form_add_qb = document.querySelector('#wrapper_temporary_item');
+function myFunction(select_item) {
+    search_qb.value = select_item;
+}
+btn_show_item.onclick = function () {
+    for (let item of form_add_qb.children) {
+        if (item.className == search_qb.value && item.className !== "") {
+            item.setAttribute("type", "text");
+            item.style.display = 'block';
+            form_add.append(item);
+        }
+    }
+};

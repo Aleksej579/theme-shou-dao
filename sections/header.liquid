@@ -238,6 +238,7 @@
     {%- endif -%}
 
     {%- if section.settings.logo_position == 'top-center' or section.settings.menu == blank -%}
+      
       <details-modal class="header__search">
         <details>
           <summary class="header__icon header__icon--search header__icon--summary link link--text focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
@@ -442,8 +443,12 @@
           </script>
              
 		{%- endif -%}
-              
-              
+           
+    <!-- New btn open popup QB -->
+    <button type="button" class="button button--secondary" id="btn_open_qb">
+      Quick Buy
+    </button>
+
     </div>
   </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
