@@ -59,3 +59,5 @@ btn_show_item.onclick = function () {
         }
     }
 };
+
+console.log(true)
