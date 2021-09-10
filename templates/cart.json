@@ -1,1 +1,35 @@
-{"sections":{"cart-items":{"type":"main-cart-items","settings":{}},"cart-footer":{"type":"main-cart-footer","blocks":{"subtotal":{"type":"subtotal","settings":{}},"buttons":{"type":"buttons","settings":{}}},"block_order":["subtotal","buttons"],"settings":{}}},"order":["cart-items","cart-footer"]}
+{
+    "sections": {
+        "cart-items": {
+            "type": "main-cart-items",
+            "settings": {}
+        },
+        "cart-items-quick_buy": {
+            "type": "main-cart-items-quick_buy",
+            "settings": {}
+        },
+        "cart-footer": {
+            "type": "main-cart-footer",
+            "blocks": {
+                "subtotal": {
+                    "type": "subtotal",
+                    "settings": {}
+                },
+                "buttons": {
+                    "type": "buttons",
+                    "settings": {}
+                }
+            },
+            "block_order": [
+                "subtotal",
+                "buttons"
+            ],
+            "settings": {}
+        }
+    },
+    "order": [
+        "cart-items",
+        "cart-items-quick_buy",
+        "cart-footer"
+    ]
+}
