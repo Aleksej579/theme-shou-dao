@@ -1,3 +1,4 @@
+// for request start
 $('slider-component ul.multicolumn-list').each(function () {
     $(this).replaceWith($('<div class="ul_">' + this.innerHTML + '</div>'));
 });
@@ -31,6 +32,8 @@ $(document).ready(function () {
         }
     );
 });
+// for request end
+
 
 
 // Open QB
