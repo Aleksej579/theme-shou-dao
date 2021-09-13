@@ -48,6 +48,13 @@
           "type": "description",
           "settings": {
           }
+        },
+        "b9958260-7f09-48a0-86c2-19c74208d8d4": {
+          "type": "text",
+          "settings": {
+            "text": "Text block{{ product.metafields.my_fields.dtime | metafield_text }}",
+            "text_style": "uppercase"
+          }
         }
       },
       "block_order": [
@@ -58,7 +65,8 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description"
+        "description",
+        "b9958260-7f09-48a0-86c2-19c74208d8d4"
       ],
       "settings": {
         "enable_sticky_info": false,
