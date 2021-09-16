@@ -43,18 +43,6 @@
           "settings": {
             "show_dynamic_checkout": true
           }
-        },
-        "description": {
-          "type": "description",
-          "settings": {
-          }
-        },
-        "b9958260-7f09-48a0-86c2-19c74208d8d4": {
-          "type": "text",
-          "settings": {
-            "text": "Text block{{ product.metafields.my_fields.dtime | metafield_text }}",
-            "text_style": "uppercase"
-          }
         }
       },
       "block_order": [
@@ -64,9 +52,7 @@
         "price",
         "variant_picker",
         "quantity_selector",
-        "buy_buttons",
-        "description",
-        "b9958260-7f09-48a0-86c2-19c74208d8d4"
+        "buy_buttons"
       ],
       "settings": {
         "enable_sticky_info": false,
