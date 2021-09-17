@@ -119,9 +119,33 @@
                     <p class="">
                       <input id="metafielaBrowser" type="hidden" name="attributes[metafielaBrowser]" value="{{ cart.attributes["metafielaBrowser"] }}">
 
-                      <input id="greeting_hidden" type="" name="attributes[Text_greeting_card]" value="www">
-                      <input id="greeting_hidden_text_on_email" type="" name="attributes[Email_greeting_card]" value="wwwwwww">
-                      test--- {{ item.properties | size }}
+                      <input id="greeting_hidden" type="" name="attributes[Text_greeting_card]" value="">
+                      <input id="greeting_hidden_text_on_email" type="" name="attributes[Email_greeting_card]" value="">
+
+                      {{ cart.items }}
+
+                      {% if product.price >= 5000 and customer.has_account %}
+                      <form>
+                        <div id="wrapper_add_gift_option">
+                          <input type="checkbox" id="add_gift_option">
+                          <label for="add_gift_option">Add a gift option</label>
+                          <div class="wrapper_inputs">
+                            <label for="greeting_text"><em>Enter the greeting text</em></label> <br>
+                            <input type="text" id="greeting_text" pattern="^[a-zA-Z., ]+$" min="2" maxlength="200" title="Only English language. You can use letters, commas, and dots. Maximum of 200 symbols.">
+                            <div>
+                              <input type="checkbox" id="send_to_email">
+                              <label for="send_to_email"><em>Send a congratulation inscription via email</em></label> <br>
+                              <input type="email" id="text_on_email" placeholder="james_bond@gmail.com" title='Enter the email to send' required>
+                            </div>
+                            <input type="hidden" id="btn_replace_text_email" value="Save greeting" onclick="saveGreeting()">
+                          </div>
+                        </div>
+                      </form>
+                    {% endif %}
+
+                    <input id="greeting_hidden" type="hidden" name="attributes[Text_greeting_card]" value="">
+                    <input id="greeting_hidden_text_on_email" type="hidden" name="attributes[Email_greeting_card]" value="">
+
                     </p>
 
 
