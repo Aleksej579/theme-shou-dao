@@ -71,11 +71,14 @@ if (btn_show_item) {
 let add_gift_option = document.querySelector('#wrapper_add_gift_option #add_gift_option');
 let wrapper_inputs = document.querySelector('#wrapper_add_gift_option .wrapper_inputs');
 
+
 let greeting_text = document.querySelector('#wrapper_add_gift_option #greeting_text');
 let text_on_email = document.querySelector('#wrapper_add_gift_option #text_on_email');
 let btn_replace_text_email = document.querySelector('#wrapper_add_gift_option #btn_replace_text_email');
 let greeting_hidden = document.querySelector('.product-form__buttons #greeting_hidden');
 let greeting_hidden_text_on_email = document.querySelector('.product-form__buttons #greeting_hidden_text_on_email');
+
+let send_to_email = document.querySelector('#wrapper_add_gift_option #send_to_email');
 
 wrapper_inputs.style.display = 'none'
 add_gift_option.addEventListener('input', () => {
@@ -83,6 +86,15 @@ add_gift_option.addEventListener('input', () => {
         wrapper_inputs.style.display = 'block'
     } else {
         wrapper_inputs.style.display = 'none'
+    }
+});
+
+text_on_email.style.display = 'none'
+send_to_email.addEventListener('input', () => {
+    if (send_to_email.checked) {
+        text_on_email.style.display = 'block'
+    } else {
+        text_on_email.style.display = 'none'
     }
 });
 
