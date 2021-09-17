@@ -68,11 +68,23 @@ if (btn_show_item) {
 }
 
 // greeting card
+let add_gift_option = document.querySelector('#wrapper_add_gift_option #add_gift_option');
+let wrapper_inputs = document.querySelector('#wrapper_add_gift_option .wrapper_inputs');
+
 let greeting_text = document.querySelector('#wrapper_add_gift_option #greeting_text');
 let text_on_email = document.querySelector('#wrapper_add_gift_option #text_on_email');
 let btn_replace_text_email = document.querySelector('#wrapper_add_gift_option #btn_replace_text_email');
 let greeting_hidden = document.querySelector('.product-form__buttons #greeting_hidden');
 let greeting_hidden_text_on_email = document.querySelector('.product-form__buttons #greeting_hidden_text_on_email');
+
+wrapper_inputs.style.display = 'none'
+add_gift_option.addEventListener('input', () => {
+    if (add_gift_option.checked) {
+        wrapper_inputs.style.display = 'block'
+    } else {
+        wrapper_inputs.style.display = 'none'
+    }
+});
 
 greeting_text.addEventListener('input', () => {
     if (greeting_text.value.length == 200) {
