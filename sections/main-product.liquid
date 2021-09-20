@@ -141,35 +141,6 @@
               </quantity-input>
             </div>
         
-       
-        
-        
-        
-        
-<!--          <form name="engraving" method="post" action="/cart/add">
-          <div>
-            <input type="radio" id="contactChoice1" name="contact" value="email">
-            <label for="contactChoice1">Add an engraving</label>
-            <input type="radio" id="contactChoice2" name="contact" value="phone">
-            <label for="contactChoice2">Hide an engraving</label>
-          </div>
-           
-          <input type="text" size="40" form="product-form-">
-          <input type="submit" value="submit">
-         </form>
-        
- -->
-        
-
-        
-
-        
-
-        
-        
-        
-
-        
         
           {%- when 'popup' -%}
               <modal-opener class="product-popup-modal__opener no-js-hidden" data-modal="#PopupModal-{{ block.id }}" {{ block.shopify_attributes }}>
@@ -324,11 +295,10 @@
                     </p>
 
                    
-
-
                     <!-- hidden input for Gift-Card -->
-                    <input id="greeting_hidden" type="" name="attributes[Text_greeting_card]" value="">
-                    <input id="greeting_hidden_text_on_email" type="" name="attributes[Email_greeting_card]" value="">
+                    <input id="greeting_hidden" type="" name="properties[Text_greeting_card]" value="">
+                    <input id="greeting_hidden_text_on_email" type="" name="properties[Email_greeting_card]" value="">
+
 
                     <button
                       type="submit"
