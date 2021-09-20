@@ -445,9 +445,11 @@
 		{%- endif -%}
            
     <!-- New btn open popup QB -->
-    <button type="button" class="button button--secondary" id="btn_open_qb">
-      Quick Buy
-    </button>
+    {% if template == 'cart' %}
+      <button type="button" class="button button--secondary" id="btn_open_qb">
+        Quick Buy
+      </button>
+    {% endif %}
 
     </div>
   </header>
