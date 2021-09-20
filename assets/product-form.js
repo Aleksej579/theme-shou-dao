@@ -18,8 +18,8 @@ class ProductForm extends HTMLElement {
 
     const body = JSON.stringify({
       properties: {
-        Text_greeting_card: document.getElementById('greeting_hidden').value,
-        Email_greeting_card: document.getElementById('greeting_hidden_text_on_email').value
+        'Text greeting card': document.getElementById('greeting_hidden').value,
+        'Email greeting card': document.getElementById('greeting_hidden_text_on_email').value
       },
       ...JSON.parse(serializeForm(this.form)),
       sections: this.cartNotification.getSectionsToRender().map((section) => section.id),
