@@ -71,7 +71,6 @@ if (btn_show_item) {
 let add_gift_option = document.querySelector('#wrapper_add_gift_option #add_gift_option');
 let wrapper_inputs = document.querySelector('#wrapper_add_gift_option .wrapper_inputs');
 
-
 let greeting_text = document.querySelector('#wrapper_add_gift_option #greeting_text');
 let text_on_email = document.querySelector('#wrapper_add_gift_option #text_on_email');
 let btn_replace_text_email = document.querySelector('#wrapper_add_gift_option #btn_replace_text_email');
