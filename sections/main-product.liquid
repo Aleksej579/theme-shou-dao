@@ -261,6 +261,7 @@
             <div {{ block.shopify_attributes }}>
 
               <!-- form enter greeting text -->
+              <!-- if product.price >= 5000 and customer.has_account -->
 
               {% if product.price >= 5000 and customer.has_account %}
                 <form>
@@ -281,24 +282,14 @@
                 </form>
               {% endif %}
 
-
-
               <product-form class="product-form">
                 {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                
                   <div class="product-form__buttons">
                     
-                    <p class="line-item-property__field">
-                      <label for="engraved">Engraved</label>
-                      <input id="engraved" type="text" name="properties[Engraved]" value="test_">
-                    </p>
-
-                   
                     <!-- hidden input for Gift-Card -->
-                    <input id="greeting_hidden" type="" name="properties[Text_greeting_card]" value="">
-                    <input id="greeting_hidden_text_on_email" type="" name="properties[Email_greeting_card]" value="">
-
+                    <input id="greeting_hidden" type="hidden" name="properties[Text_greeting_card]" value="">
+                    <input id="greeting_hidden_text_on_email" type="hidden" name="properties[Email_greeting_card]" value="">
 
                     <button
                       type="submit"
