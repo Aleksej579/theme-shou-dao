@@ -35,20 +35,20 @@
     "162747831075fc3ac5": {
       "type": "multicolumn",
       "blocks": {
-        "162747831075fc3ac5-0": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/2.jpg",
-            "title": "",
-            "text": "<p><a href=\"\/collections\" title=\"All collections\">Collections<\/a><\/p>"
-          }
-        },
         "162747831075fc3ac5-1": {
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/3.jpg",
             "title": "",
             "text": "<p><a href=\"\/pages\/privacy-policy\" title=\"Privacy Policy\">Page Policy<\/a><\/p>"
+          }
+        },
+        "162747831075fc3ac5-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2.jpg",
+            "title": "",
+            "text": "<p><a href=\"\/collections\" title=\"All collections\">Collections<\/a><\/p>"
           }
         },
         "162747831075fc3ac5-2": {
@@ -80,13 +80,13 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/startup-desk.jpg",
             "title": "",
-            "text": ""
+            "text": "<p><a href=\"\/collections\/all\" target=\"_blank\" title=\"All products\">\/collections\/all<\/a><\/p>"
           }
         }
       },
       "block_order": [
-        "162747831075fc3ac5-0",
         "162747831075fc3ac5-1",
+        "162747831075fc3ac5-0",
         "162747831075fc3ac5-2",
         "fdb4d0e8-cc1d-493e-a249-c48aad4f6ac4",
         "75f99b71-e748-4534-8d60-96e76e2e98b6",
