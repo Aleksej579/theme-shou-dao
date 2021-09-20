@@ -1,6 +1,6 @@
 class ProductForm extends HTMLElement {
   constructor() {
-    super();   
+    super();
 
     this.form = this.querySelector('form');
     this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
@@ -10,13 +10,17 @@ class ProductForm extends HTMLElement {
   onSubmitHandler(evt) {
     evt.preventDefault();
     this.cartNotification.setActiveElement(document.activeElement);
-    
+
     const submitButton = this.querySelector('[type="submit"]');
 
     submitButton.setAttribute('disabled', true);
     submitButton.classList.add('loading');
 
     const body = JSON.stringify({
+      properties: {
+        Text_greeting_card: document.getElementById('greeting_hidden').value,
+        Email_greeting_card: document.getElementById('greeting_hidden_text_on_email').value
+      },
       ...JSON.parse(serializeForm(this.form)),
       sections: this.cartNotification.getSectionsToRender().map((section) => section.id),
       sections_url: window.location.pathname
