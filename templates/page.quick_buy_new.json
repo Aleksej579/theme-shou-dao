@@ -1,0 +1,14 @@
+{
+    "sections": {
+        "quick_buy_new": {
+            "type": "quick_buy_new",
+            "settings": {
+                "heading": ""
+            }
+        }
+    },
+    "order": [
+        "quick_buy_new",
+        "main-cart-items-quick_buy"
+    ]
+}

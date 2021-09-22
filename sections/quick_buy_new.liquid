@@ -1,0 +1,94 @@
+{{ 'component-cart.css' | asset_url | stylesheet_tag }}
+{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}
+{{ 'component-totals.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+{{ 'section-test.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'react-component.js' | asset_url }}" defer="defer"></script>
+
+<cart-items class="page-width" id="qb">
+
+
+  <div class="title-wrapper-with-link">
+    <h1 class="title title--primary">Quick Buy New</h1>
+  </div>
+
+  <form id="add-item-form" action="/cart/add" method="post" enctype="multipart/form-data" novalidate="novalidate" data-type="add-to-cart-form">
+    <input class="button" type="submit" id="add-to-cart_" name="add" value="Add products to Cart" />
+    <div id="wrapper_temporary_item">
+      {% for product in collections['zavhoz'].products %}
+        <div id="wrapper_product">
+
+          <input  type="hidden" name="id[]" value="{{ product.variants[0].id }}">
+
+          <div class="wrapper_cart_prod_zavhoz">
+            <p><b>Name of product: </b>{{ product.title }}</p>
+            <img src="{{ product.variants.first.image | img_url: 'small' }}" alt="img" class="img-responsive" />
+            <p><b>Description: </b>{{ product.description }}</p>
+          </div>
+          <div class="wrapper_cart_prod_zavhoz">
+            <p><b>Price: </b>{{ product.price }}</p>
+            <p><b>Price: </b>{{ product.price | money}}</p>
+          </div>
+          <div class="wrapper_cart_prod_zavhoz">
+            <div class="cart-item__quantity">
+
+              <div class="product-form__input product-form__quantity" {{ block.shopify_attributes }}>
+                <label class="form__label" for="Quantity-{{ section.id }}">
+                  {{ 'products.product.quantity.label' | t }}
+                </label>
+                <quantity-input class="quantity">
+                  <button class="quantity__button no-js-hidden" name="minus" type="button">
+                    <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
+                    {% render 'icon-minus' %}
+                  </button>
+                  <input class="quantity__input"
+                      type="number"
+                      name="quantity"
+                      id="Quantity-{{ section.id }}"
+                      min="1"
+                      value="1"
+                      form="add-item-form"
+                    >
+                  <button class="quantity__button no-js-hidden" name="plus" type="button">
+                    <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
+                    {% render 'icon-plus' %}
+                  </button>
+                </quantity-input>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="totals">
+      <h3 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h3>
+      <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
+    </div>
+    <input class="button" type="submit" id="add-to-cart" name="add" value="Add products to Cart" />
+  </form>
+
+</cart-items>
+
+{% schema %}
+{
+  "name": "t:sections.quick_buy_new.name",
+  "tag": "section",
+  "class": "spaced-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Quick buy new",
+      "label": "Heading"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.quick_buy_new.presets.name"
+    }
+  ]
+}
+{% endschema %}

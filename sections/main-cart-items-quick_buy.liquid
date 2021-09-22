@@ -1,4 +1,4 @@
-{{ 'component-cart.css' | asset_url | stylesheet_tag }}
+<!-- {{ 'component-cart.css' | asset_url | stylesheet_tag }}
 {{ 'component-cart-items.css' | asset_url | stylesheet_tag }}
 {{ 'component-totals.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
@@ -12,11 +12,10 @@
 
   <div class="title-wrapper-with-link">
     <h1 class="title title--primary">Quick Buy</h1>
-  </div>
+  </div> -->
 
   <!-- NEW form Quick Buy -->
-  <!-- find product by SKU -->
-  <div class="wrapper_search">
+  <!-- <div class="wrapper_search">
     <input class="search_qb field__input" type="text" value="" placeholder="Search" autofocus>
     <div class="wrapper_select">
       <label for="select_qb">Select a product SKU</label>
@@ -28,29 +27,31 @@
       </select>
     </div>
     <input class="button button--secondary" type="submit" id="btn_search_qb" name="add" value="Add product by SKU" />
-  </div>
+  </div> -->
 
   <!-- take needing item product and insert to 'wrapper_prod' -->
-  <div id="wrapper_temporary_item">
+
+  <!-- <div id="wrapper_temporary_item">
     {% for product in collections['all'].products %}
       <div class="{{ product.variants.first.sku }}" id="wrapper_product">
         <input class="{{ product.variants.first.sku }}" type="hidden" name="id[]" value="{{ product.variants[0].id }}">
         <p><b>Name of product: </b>{{ product.title }}</p>
-        <img src="{{ product.variants.first.image | img_url: 'small' }}" alt="img" class="img-responsive" />
+        <img src="{{ product.variants.first.image | img_url: 'small' }}" alt="img" class="img-responsive" loading="lazy" />
         <p><b>Description: </b>{{ product.description }}</p>
         <p><b>Price: </b>{{ product.price }}</p>
         <hr>
       </div>
     {% endfor %}
-  </div><br>
+  </div><br> -->
 
   <!-- form which take item product and after submit send to cart -->
-  <form id="add-item-form" action="/cart/add" method="post">
+  
+  <!-- <form id="add-item-form" action="/cart/add" method="post">
     <div class="wrapper_prod"></div>
     <input class="button" type="submit" id="add-to-cart" name="add" value="Add products to Cart" />
   </form><br>
 
-</cart-items>
+</cart-items> -->
 
 
 {% schema %}
