@@ -1,0 +1,26 @@
+<!-- {{ 'section-contact-form.css' | asset_url | stylesheet_tag }} -->
+
+<div class="contact page-width page-width--narrow spaced-section">
+  <h2 class="title">{{ section.settings.heading | escape }}</h2>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.quick_buy_new.name",
+  "tag": "section",
+  "class": "spaced-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Quick buy new",
+      "label": "Heading"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.quick_buy_new.presets.name"
+    }
+  ]
+}
+{% endschema %}
