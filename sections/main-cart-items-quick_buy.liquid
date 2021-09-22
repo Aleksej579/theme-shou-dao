@@ -36,7 +36,7 @@
       <div class="{{ product.variants.first.sku }}" id="wrapper_product">
         <input class="{{ product.variants.first.sku }}" type="hidden" name="id[]" value="{{ product.variants[0].id }}">
         <p><b>Name of product: </b>{{ product.title }}</p>
-        <img src="{{ product.variants.first.image | img_url: 'small' }}" alt="img" class="img-responsive" />
+        <img src="{{ product.variants.first.image | img_url: 'small' }}" alt="img" class="img-responsive" loading="lazy" />
         <p><b>Description: </b>{{ product.description }}</p>
         <p><b>Price: </b>{{ product.price }}</p>
         <hr>
