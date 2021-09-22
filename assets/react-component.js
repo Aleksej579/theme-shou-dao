@@ -34,39 +34,6 @@ $(document).ready(function () {
 });
 // for request end
 
-
-
-// Open QB
-let btn_open_qb = document.querySelector('#btn_open_qb');
-let qb_popup = document.querySelector('#qb');
-let form_add = document.querySelector('#add-item-form .wrapper_prod');
-
-if (form_add) {
-    btn_open_qb.onclick = function () {
-        form_add.innerHTML = ''
-        qb_popup.style.display = 'block'
-    };
-}
-
-//quickBuy
-let search_qb = document.querySelector('.wrapper_search .search_qb');
-let btn_show_item = document.querySelector('.wrapper_search #btn_search_qb');
-let form_add_qb = document.querySelector('#wrapper_temporary_item');
-function myFunction(select_item) {
-    search_qb.value = select_item;
-}
-if (btn_show_item) {
-    btn_show_item.onclick = function () {
-        for (let item of form_add_qb.children) {
-            if (item.className == search_qb.value && item.className !== "") {
-                item.setAttribute("type", "text");
-                item.style.display = 'block';
-                form_add.append(item);
-            }
-        }
-    };
-}
-
 // greeting card
 let add_gift_option = document.querySelector('#wrapper_add_gift_option #add_gift_option');
 let wrapper_inputs = document.querySelector('#wrapper_add_gift_option .wrapper_inputs');
