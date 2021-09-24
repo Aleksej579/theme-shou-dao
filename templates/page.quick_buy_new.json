@@ -8,7 +8,6 @@
         }
     },
     "order": [
-        "quick_buy_new",
-        "main-cart-items-quick_buy"
+        "quick_buy_new"
     ]
 }
