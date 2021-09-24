@@ -1,0 +1,103 @@
+<h2>New arrival 2</h2>
+
+<ul class='wrapper-all-cart'>
+    {% for product in collections.new-arrival.products limit: 5 %}
+        {%- liquid
+            assign days = 10
+            assign days_ = 40
+            assign period_time = days | times: 24 | times: 60 | times: 60
+            assign period_time_ = days_ | times: 24 | times: 60 | times: 60
+            assign date_now = 'now' | date: '%s'
+            assign published_at = product.published_at | date: '%s'
+            assign date_finished = date_now | minus: period_time | date: '%s'
+            assign date_finished_ = date_now | minus: period_time_ | date: '%s'
+        -%}
+        {% if published_at > date_finished %}
+            <li class="cart">
+                <span class="budget_new">New product</span>
+                <p>{{ product.title }}</p>
+                <img src="{{ product | img_url: 'medium'  }}" alt="prod new arrive" loading="lazy" width="" height=""> 
+                <p class="date_publish">{{ product.published_at | date: "%b.%d.%Y" }}</p>
+            </li>
+        {% elsif published_at < date_finished and published_at > date_finished_ %}
+            <li class="cart">
+                <span class="budget_old">Old product</span>
+                <p>{{ product.title }}</p>
+                <img class="img_filter" src="{{ product | img_url: 'medium'  }}" alt="prod new arrive" loading="lazy" width="" height="">
+                <p class="date_publish">{{ product.published_at | date: "%b.%d.%Y" }}</p>
+            </li>
+        {% else %}
+            <li class="cart cart_soon">
+                <p class="text_soon">{{section.settings.new_arrival}}</p>
+            </li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+{% schema %}
+    {
+        "name": "t:sections.widget-new-arrivals.name",
+        "class": "new_arrival",
+        "settings": [
+            {
+                "type": "text",
+                "id": "new_arrival",
+                "label": "New arrival",
+                "default": "New arrivals soon!"
+            }
+        ]
+    }
+{% endschema %}
+
+{% javascript %}{% endjavascript %}
+
+{% stylesheet %}
+    .wrapper-all-cart {
+        display: flex;
+        padding: 0;
+    }
+    .cart {
+        width: 20%;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        margin: 5px;
+        position: relative;
+        padding-bottom: 3%;
+    }
+    .cart img {
+        width: 100%;
+        height: auto;
+    }
+    .cart span {
+        color: grey;
+        font-weight: 600;
+        text-decoration: underline;
+    }
+    .cart span.budget_new {
+        color: red;
+    }
+    .cart span.budget_old {
+        color: grey;
+    }
+    .cart .date_publish {
+        position: absolute;
+        bottom: 0;
+    }
+    .cart img.img_filter {
+        filter: opacity(25%);
+    }
+    .soon {
+        text-align: center;
+        text-decoration: underline;
+    }
+    .cart_soon {
+        display: flex;
+        justify-content: center;
+    }
+    .text_soon {
+        color: grey;
+    }
+{% endstylesheet %}
