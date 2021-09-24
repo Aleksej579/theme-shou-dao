@@ -103,7 +103,7 @@
         "swipe_on_mobile": true
       }
     },
-    "widget-new-arrivals": {
+    "widget-new-arrivals-2": {
       "type": "widget-new-arrivals",
       "settings": {
         "new_arrival": "New arrivals soon!"
@@ -167,7 +167,7 @@
   "order": [
     "image_banner",
     "162747831075fc3ac5",
-    "widget-new-arrivals",
+    "widget-new-arrivals-2",
     "featured_products",
     "image_text",
     "test_block"
