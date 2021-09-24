@@ -104,7 +104,7 @@
       }
     },
     "widget-new-arrivals-2": {
-      "type": "widget-new-arrivals",
+      "type": "widget-new-arrivals-2",
       "settings": {
         "new_arrival": "New arrivals soon!"
       }
