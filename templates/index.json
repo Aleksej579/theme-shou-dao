@@ -82,6 +82,14 @@
             "title": "",
             "text": "<p><a href=\"\/collections\/all\" target=\"_blank\" title=\"All products\">\/collections\/all<\/a><\/p>"
           }
+        },
+        "bce60cb5-656e-480c-9654-4317334aac84": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/berries-granola.jpg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
         }
       },
       "block_order": [
@@ -90,7 +98,8 @@
         "162747831075fc3ac5-2",
         "fdb4d0e8-cc1d-493e-a249-c48aad4f6ac4",
         "75f99b71-e748-4534-8d60-96e76e2e98b6",
-        "a352f572-0c90-4b86-a713-a7171dac569b"
+        "a352f572-0c90-4b86-a713-a7171dac569b",
+        "bce60cb5-656e-480c-9654-4317334aac84"
       ],
       "settings": {
         "title": "Test-slider-auto-10-sek",
