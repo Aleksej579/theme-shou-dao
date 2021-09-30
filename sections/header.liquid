@@ -347,6 +347,9 @@
             </li>
           {%- endfor -%}
         </ul>
+
+        {% render 'test-menu-by-code' %}
+
       </nav>
     {%- endif -%}
 
@@ -420,9 +423,7 @@
           </div>
         {%- endif -%}
       </a>
-      
-
-              
+    
 		{%- if customer.has_account -%}
 
           <div class='orders_in_progress' style='visibility: hidden; display: flex; align-items: center; flex-direction: column; justify-content: center;'>

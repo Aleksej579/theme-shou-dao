@@ -1,0 +1,83 @@
+<style>
+    .list-menu--disclosure {
+        z-index: 1;
+    }
+    .drop-down-content {
+        display: none;
+        min-width: max-content !important;
+        animation: animateMenuOpen var(--duration-default) ease;
+    }
+    .dropdown:hover .drop-down-content {
+        display: block;
+    }
+    .mr15 {
+        margin: 0 15px;
+    }
+    .fs1_4 {
+        font-size: 1.4rem;
+    }
+    .dropdown {
+        position: relative;
+    }
+    .dropdown svg {
+        height: 0.6rem;
+        position: absolute;
+        right: 0;
+        top: calc(50% - 0.35rem);
+    }
+    .list_products a {
+        font-style: italic;
+    }
+</style>
+
+<div class="Polaris-Card">
+    {% assign tag_handle = 'beverages' %}
+    {% assign collection = collections[tag_handle] %}
+    {% assign tag_handle_1 = 'beverages-cocktail' %}
+    {% assign collection_1 = collections[tag_handle_1] %}
+    {% assign tag_handle_2 = 'beverages-coffee' %}
+    {% assign collection_2 = collections[tag_handle_2] %}
+    <ul class="list-menu list-menu--inline">
+        <!-- this simple links another page -->
+        <li><a class="link mr15" href="/cart">Cart</a></li>
+        <!-- this is simple item menu -->
+        <li class="dropdown">
+            <a class="link mr15" href="{{ collection.url }}">{{ collection.title }}</a>
+            {% render 'icon-caret' %}
+            <ul class="drop-down-content list-menu list-menu--disclosure">
+                <li>
+                    <a class="header__menu-item fs1_4" href="{{ collection_1.url }}">{{ collection_1.title }}</a>
+                    <ul class="list_products">
+                    {% for product in collection_1.products %}
+                        <li>
+                            <a class="header__menu-item fs1_4" href="{{ product.url }}">{{ product.title }}</a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </li>
+                <li>
+                    <a class="header__menu-item fs1_4" href="{{ collection_2.url }}">{{ collection_2.title }}</a>
+                    <ul class="list_products">
+                    {% for product in collection_2.products %}
+                        <li>
+                            <a class="header__menu-item fs1_4" href="{{ product.url }}">{{ product.title }}</a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <!-- this is auto item menu -->
+        <li class="dropdown">
+            <a class="link mr15" href="/collections">Collections all</a>
+            {% render 'icon-caret' %}
+            <ul class="drop-down-content list-menu list-menu--disclosure">
+                {% for collection in collections %}
+                <li>
+                    <a class="header__menu-item fs1_4" href="{{ collection.url }}">{{ collection.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        <li>
+    </ul>
+</div>
