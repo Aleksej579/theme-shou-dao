@@ -106,3 +106,5 @@ Ensure that you follow the list of [theme store requirements](https://shopify.de
 ## License
 
 Copyright (c) 2021-present Shopify Inc. See [LICENSE](/LICENSE.md) for further details.
+
+![shopyfyliquid1](https://user-images.githubusercontent.com/16978473/138596749-e7edda00-3391-48e0-a4d9-68d7b1956b51.png)
