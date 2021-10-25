@@ -107,4 +107,7 @@ Ensure that you follow the list of [theme store requirements](https://shopify.de
 
 Copyright (c) 2021-present Shopify Inc. See [LICENSE](/LICENSE.md) for further details.
 
-![shopyfyliquid1](https://user-images.githubusercontent.com/16978473/138596749-e7edda00-3391-48e0-a4d9-68d7b1956b51.png)
+![FireShot Capture 054 - Sports equipment for your health - shopyfyliquid myshopify com](https://user-images.githubusercontent.com/16978473/138641984-8938be93-b331-4ee0-960f-4dbacbac56f4.png)
+![FireShot Capture 055 - Sports equipment for your health - shopyfyliquid myshopify com](https://user-images.githubusercontent.com/16978473/138642016-b75b9f24-0682-47d6-b9f8-14a282dade3e.png)
+![FireShot Capture 056 - Sports equipment for your health - shopyfyliquid myshopify com](https://user-images.githubusercontent.com/16978473/138642025-1974e403-716a-40e0-a1e7-bedb6d61fed0.png)
+
