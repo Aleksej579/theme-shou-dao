@@ -168,6 +168,50 @@
         "layout": "image_first"
       }
     },
+    "165671156750a72885": {
+      "type": "multicolumn",
+      "blocks": {
+        "1656711567363c581e-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/startup-desk.jpg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        },
+        "1656711567363c581e-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/office-computer-screen.jpg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        },
+        "1656711567363c581e-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/office-wooden-desk-workspace.jpg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1656711567363c581e-0",
+        "1656711567363c581e-1",
+        "1656711567363c581e-2"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
+    },
     "test_block": {
       "type": "test-block",
       "disabled": true,
@@ -182,6 +226,7 @@
     "widget-new-arrivals-2",
     "featured_products",
     "image_text",
+    "165671156750a72885",
     "test_block"
   ]
 }
