@@ -169,6 +169,7 @@
     },
     "test_block": {
       "type": "test-block",
+      "disabled": true,
       "settings": {
         "react": "Buy it now and get two!"
       }
