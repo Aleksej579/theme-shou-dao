@@ -59,6 +59,20 @@
         "enable_video_looping": false
       }
     },
+    "1656710866103d4290": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "collection": "bodybuilding",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_vendor": false
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "disabled": true,
@@ -114,6 +128,7 @@
   },
   "order": [
     "main",
+    "1656710866103d4290",
     "product-recommendations",
     "1627215339b2876973"
   ]
