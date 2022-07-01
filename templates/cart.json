@@ -1,35 +1,58 @@
 {
-    "sections": {
-        "cart-items": {
-            "type": "main-cart-items",
-            "settings": {}
-        },
-        "cart-items-quick_buy": {
-            "type": "main-cart-items-quick_buy",
-            "settings": {}
-        },
-        "cart-footer": {
-            "type": "main-cart-footer",
-            "blocks": {
-                "subtotal": {
-                    "type": "subtotal",
-                    "settings": {}
-                },
-                "buttons": {
-                    "type": "buttons",
-                    "settings": {}
-                }
-            },
-            "block_order": [
-                "subtotal",
-                "buttons"
-            ],
-            "settings": {}
-        }
+  "sections": {
+    "cart-items": {
+      "type": "main-cart-items",
+      "settings": {
+        "show_vendor": false
+      }
     },
-    "order": [
-        "cart-items",
-        "cart-items-quick_buy",
-        "cart-footer"
-    ]
+    "cart-items-quick_buy": {
+      "type": "main-cart-items-quick_buy",
+      "settings": {
+        "show_vendor": false
+      }
+    },
+    "cart-footer": {
+      "type": "main-cart-footer",
+      "blocks": {
+        "subtotal": {
+          "type": "subtotal",
+          "settings": {
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "subtotal",
+        "buttons"
+      ],
+      "settings": {
+        "show_cart_note": false
+      }
+    },
+    "1656711147fda50b96": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "collection": "bodybuilding",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "add_image_padding": true,
+        "show_vendor": false
+      }
+    }
+  },
+  "order": [
+    "cart-items",
+    "cart-items-quick_buy",
+    "cart-footer",
+    "1656711147fda50b96"
+  ]
 }
