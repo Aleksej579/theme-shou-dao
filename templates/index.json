@@ -1,5 +1,55 @@
 {
   "sections": {
+    "16567956491f3a2b3b": {
+      "type": "multicolumn",
+      "blocks": {
+        "2e5472ea-3a2b-44de-b8ff-e66636717762": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/5.jpg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        },
+        "1656795649952f1786-0": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        },
+        "1656795649952f1786-1": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        },
+        "1656795649952f1786-2": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "2e5472ea-3a2b-44de-b8ff-e66636717762",
+        "1656795649952f1786-0",
+        "1656795649952f1786-1",
+        "1656795649952f1786-2"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -221,6 +271,7 @@
     }
   },
   "order": [
+    "16567956491f3a2b3b",
     "image_banner",
     "162747831075fc3ac5",
     "widget-new-arrivals-2",
