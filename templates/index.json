@@ -1,44 +1,36 @@
 {
   "sections": {
-    "1656795805ae080c39": {
-      "type": "multicolumn",
+    "image_banner": {
+      "type": "image-banner",
       "blocks": {
-        "16567958057f1a0396-0": {
-          "type": "column",
+        "heading": {
+          "type": "heading",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+            "heading": "Talk about your brand"
           }
         },
-        "16567958057f1a0396-1": {
-          "type": "column",
+        "button": {
+          "type": "buttons",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
-          }
-        },
-        "16567958057f1a0396-2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "16567958057f1a0396-0",
-        "16567958057f1a0396-1",
-        "16567958057f1a0396-2"
+        "heading",
+        "button"
       ],
       "settings": {
-        "title": "Multicolumn",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "Button label",
-        "button_link": "",
-        "swipe_on_mobile": false
+        "image": "shopify:\/\/shop_images\/footsteps-left-in-sand-dunes.jpg",
+        "desktop_text_box_position": "flex-end",
+        "color_scheme": "background-1",
+        "stack_images_on_mobile": true,
+        "adapt_height_first_image": false
       }
     },
     "162747831075fc3ac5": {
@@ -229,7 +221,7 @@
     }
   },
   "order": [
-    "1656795805ae080c39",
+    "image_banner",
     "162747831075fc3ac5",
     "widget-new-arrivals-2",
     "featured_products",
