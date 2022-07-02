@@ -1,5 +1,15 @@
 {
   "sections": {
+    "16567961823f32235e": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/two-people-walk-towards-a-large-white-building.jpg",
+        "desktop_text_box_position": "center",
+        "color_scheme": "background-1",
+        "stack_images_on_mobile": true,
+        "adapt_height_first_image": false
+      }
+    },
     "162747831075fc3ac5": {
       "type": "multicolumn",
       "blocks": {
@@ -188,6 +198,7 @@
     }
   },
   "order": [
+    "16567961823f32235e",
     "162747831075fc3ac5",
     "widget-new-arrivals-2",
     "featured_products",
