@@ -3,9 +3,9 @@
     "16567961823f32235e": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/two-people-walk-towards-a-large-white-building.jpg",
-        "desktop_text_box_position": "center",
-        "color_scheme": "background-1",
+        "image": "shopify:\/\/shop_images\/young-woman-doing-yoga-in-park.jpg",
+        "desktop_text_box_position": "flex-start",
+        "color_scheme": "accent-1",
         "stack_images_on_mobile": true,
         "adapt_height_first_image": false
       }
